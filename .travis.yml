@@ -9,4 +9,4 @@ notification:
 install:
   - gem install bundler
   - bundle install
-script: bundle exec fastlane ios bonjour
+script: bundle exec fastlane dev_lane
