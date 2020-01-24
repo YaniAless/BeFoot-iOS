@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F3C8BEC23DB60D500B0CF35 /* MatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3C8BEA23DB60D500B0CF35 /* MatchTableViewCell.swift */; };
+		2F3C8BED23DB60D500B0CF35 /* MatchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F3C8BEB23DB60D500B0CF35 /* MatchTableViewCell.xib */; };
+		2F3C8BF223DB637600B0CF35 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3C8BF123DB637600B0CF35 /* Match.swift */; };
+		2F3C8BF423DB638400B0CF35 /* MatchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3C8BF323DB638400B0CF35 /* MatchService.swift */; };
+		2F3C8BF823DB673B00B0CF35 /* MatchMockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3C8BF723DB673B00B0CF35 /* MatchMockService.swift */; };
 		2FCAA42C23C8E1A30096D839 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCAA42A23C8E1A30096D839 /* HomeViewController.swift */; };
 		2FCAA42D23C8E1A30096D839 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FCAA42B23C8E1A30096D839 /* HomeViewController.xib */; };
 		2FCAA43823C8E65A0096D839 /* PronosticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCAA43623C8E65A0096D839 /* PronosticsViewController.swift */; };
@@ -42,6 +47,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F3C8BEA23DB60D500B0CF35 /* MatchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTableViewCell.swift; sourceTree = "<group>"; };
+		2F3C8BEB23DB60D500B0CF35 /* MatchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchTableViewCell.xib; sourceTree = "<group>"; };
+		2F3C8BF123DB637600B0CF35 /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
+		2F3C8BF323DB638400B0CF35 /* MatchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchService.swift; sourceTree = "<group>"; };
+		2F3C8BF723DB673B00B0CF35 /* MatchMockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchMockService.swift; sourceTree = "<group>"; };
 		2FCAA42A23C8E1A30096D839 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2FCAA42B23C8E1A30096D839 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		2FCAA43623C8E65A0096D839 /* PronosticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PronosticsViewController.swift; sourceTree = "<group>"; };
@@ -90,11 +100,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F3C8BEE23DB634C00B0CF35 /* Domains */ = {
+			isa = PBXGroup;
+			children = (
+				2F3C8BEF23DB635300B0CF35 /* Match */,
+			);
+			path = Domains;
+			sourceTree = "<group>";
+		};
+		2F3C8BEF23DB635300B0CF35 /* Match */ = {
+			isa = PBXGroup;
+			children = (
+				2F3C8BF123DB637600B0CF35 /* Match.swift */,
+				2F3C8BF323DB638400B0CF35 /* MatchService.swift */,
+			);
+			path = Match;
+			sourceTree = "<group>";
+		};
+		2F3C8BF623DB672E00B0CF35 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				2F3C8BF723DB673B00B0CF35 /* MatchMockService.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
 		2FCAA42923C8E1520096D839 /* Home */ = {
 			isa = PBXGroup;
 			children = (
 				2FCAA42A23C8E1A30096D839 /* HomeViewController.swift */,
 				2FCAA42B23C8E1A30096D839 /* HomeViewController.xib */,
+				2F3C8BEA23DB60D500B0CF35 /* MatchTableViewCell.swift */,
+				2F3C8BEB23DB60D500B0CF35 /* MatchTableViewCell.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -160,6 +197,8 @@
 		2FDC290223AA97DB00367401 /* BeFoot */ = {
 			isa = PBXGroup;
 			children = (
+				2F3C8BF623DB672E00B0CF35 /* Mock */,
+				2F3C8BEE23DB634C00B0CF35 /* Domains */,
 				2FCAA42E23C8E5D90096D839 /* Scenes */,
 				2FDC290323AA97DB00367401 /* AppDelegate.swift */,
 				2FDC290523AA97DB00367401 /* SceneDelegate.swift */,
@@ -295,6 +334,7 @@
 			files = (
 				2FDC291023AA97DE00367401 /* LaunchScreen.storyboard in Resources */,
 				2FCAA44223C8E6B60096D839 /* DayMatchViewController.xib in Resources */,
+				2F3C8BED23DB60D500B0CF35 /* MatchTableViewCell.xib in Resources */,
 				2FCAA43923C8E65A0096D839 /* PronosticsViewController.xib in Resources */,
 				2FDC290D23AA97DE00367401 /* Assets.xcassets in Resources */,
 				2FCAA42D23C8E1A30096D839 /* HomeViewController.xib in Resources */,
@@ -325,7 +365,11 @@
 			files = (
 				2FDC290823AA97DB00367401 /* ViewController.swift in Sources */,
 				2FDC290423AA97DB00367401 /* AppDelegate.swift in Sources */,
+				2F3C8BF223DB637600B0CF35 /* Match.swift in Sources */,
 				2FDC290623AA97DB00367401 /* SceneDelegate.swift in Sources */,
+				2F3C8BEC23DB60D500B0CF35 /* MatchTableViewCell.swift in Sources */,
+				2F3C8BF423DB638400B0CF35 /* MatchService.swift in Sources */,
+				2F3C8BF823DB673B00B0CF35 /* MatchMockService.swift in Sources */,
 				2FCAA43823C8E65A0096D839 /* PronosticsViewController.swift in Sources */,
 				2FCAA43D23C8E6810096D839 /* HistoryViewController.swift in Sources */,
 				2FCAA44123C8E6B60096D839 /* DayMatchViewController.swift in Sources */,

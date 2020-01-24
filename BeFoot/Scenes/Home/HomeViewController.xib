@@ -9,9 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="BeFoot" customModuleProvider="target">
             <connections>
-                <outlet property="DayMatch" destination="Mej-i7-iAG" id="Nqu-8I-tQG"/>
-                <outlet property="history" destination="PEa-LN-1x0" id="nGs-fj-C16"/>
-                <outlet property="pronostics" destination="2Rr-4k-MDg" id="Ba8-Kg-fDq"/>
+                <outlet property="matchTableView" destination="xPT-Wf-CUQ" id="6nB-Je-cyL"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -23,52 +21,30 @@
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BeFoot" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wSv-dy-HMw">
                     <rect key="frame" x="159.5" y="89" width="95" height="37"/>
                     <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                    <color key="textColor" systemColor="linkColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="textColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mej-i7-iAG">
-                    <rect key="frame" x="101" y="220" width="212" height="38"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                    <state key="normal" title="Les matchs du moment"/>
-                    <connections>
-                        <action selector="touchDayMatch:" destination="-1" eventType="touchUpInside" id="VbO-yF-UFK"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Rr-4k-MDg">
-                    <rect key="frame" x="140.5" y="346" width="133" height="36"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                    <state key="normal" title="Mes pronostics"/>
-                    <connections>
-                        <action selector="touchPronsotics:" destination="-1" eventType="touchUpInside" id="bur-gg-KXK"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PEa-LN-1x0">
-                    <rect key="frame" x="162" y="484" width="90" height="36"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                    <state key="normal" title="Historique"/>
-                    <connections>
-                        <action selector="touchHistory:" destination="-1" eventType="touchUpInside" id="JEo-k2-puG"/>
-                    </connections>
-                </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Made By Yani, Alessandro and Lukas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zTc-Iy-In7">
                     <rect key="frame" x="67" y="821" width="280" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xPT-Wf-CUQ">
+                    <rect key="frame" x="20" y="134" width="374" height="628"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="2Rr-4k-MDg" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="2NJ-SN-Tgt"/>
-                <constraint firstItem="Mej-i7-iAG" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="EFr-4h-F7a"/>
-                <constraint firstItem="Mej-i7-iAG" firstAttribute="top" secondItem="wSv-dy-HMw" secondAttribute="bottom" constant="94" id="MV5-vg-glG"/>
+                <constraint firstItem="xPT-Wf-CUQ" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="GI2-ME-8ke"/>
                 <constraint firstItem="wSv-dy-HMw" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="45" id="Rce-8B-3O3"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="zTc-Iy-In7" secondAttribute="bottom" constant="20" id="ZDn-77-rf8"/>
+                <constraint firstItem="xPT-Wf-CUQ" firstAttribute="top" secondItem="wSv-dy-HMw" secondAttribute="bottom" constant="8" id="Zo7-Ju-t2r"/>
                 <constraint firstItem="wSv-dy-HMw" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="cgV-XB-nyI"/>
                 <constraint firstItem="zTc-Iy-In7" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="d03-KO-vBG"/>
-                <constraint firstItem="PEa-LN-1x0" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="gdU-Bw-oDX"/>
-                <constraint firstItem="PEa-LN-1x0" firstAttribute="top" secondItem="2Rr-4k-MDg" secondAttribute="bottom" constant="102" id="gfm-w2-uz8"/>
-                <constraint firstItem="2Rr-4k-MDg" firstAttribute="top" secondItem="Mej-i7-iAG" secondAttribute="bottom" constant="88" id="rGn-xd-gYS"/>
+                <constraint firstItem="xPT-Wf-CUQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="lEx-N1-Gd1"/>
+                <constraint firstItem="xPT-Wf-CUQ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="lwv-mN-xAJ"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="114.50892857142857"/>
