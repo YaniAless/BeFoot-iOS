@@ -12,7 +12,7 @@ class HistoryViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Historique"
+        self.title = "History"
 
         // Do any additional setup after loading the view.
     }

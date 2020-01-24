@@ -12,7 +12,7 @@ class PronosticsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Mes pronostics"
+        self.title = "Prognosis"
 
         // Do any additional setup after loading the view.
     }

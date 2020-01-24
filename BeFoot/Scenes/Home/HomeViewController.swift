@@ -9,7 +9,7 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+    
     
     @IBOutlet var dayMatch: UIButton!
     @IBOutlet var pronostics: UIButton!
@@ -17,8 +17,8 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "BeFoot"
-
+        self.title = "Home"
+        self.
     }
     
     

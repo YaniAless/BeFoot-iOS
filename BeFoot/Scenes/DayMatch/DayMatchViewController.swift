@@ -12,7 +12,7 @@ class DayMatchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Matchs du jour"
+        self.title = "Matches"
 
         // Do any additional setup after loading the view.
     }
