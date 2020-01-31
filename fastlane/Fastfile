@@ -20,7 +20,7 @@ platform :ios do
   lane :dev_lane do
     # add actions here: https://docs.fastlane.tools/actions
     say("Lane started...")
-    rocket
+    sonar
     say("Lane ended...")
   end
 end

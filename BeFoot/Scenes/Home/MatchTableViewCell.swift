@@ -14,4 +14,5 @@ class MatchTableViewCell: UITableViewCell {
     @IBOutlet var nameSecond: UILabel!
     @IBOutlet var scoreFirst: UILabel!
     @IBOutlet var scoreSecond: UILabel!
+    
 }

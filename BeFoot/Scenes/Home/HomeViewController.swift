@@ -27,7 +27,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         self.title = "Home"
         
-        self.matchTableView.rowHeight = 120
+        // self.matchTableView.rowHeight = 50
         self.matchTableView.dataSource = self
         self.matchTableView.delegate = self
         self.matchTableView.register(UINib(nibName: "MatchTableViewCell", bundle: nil), forCellReuseIdentifier: HomeViewController.MatchTableViewCellId)

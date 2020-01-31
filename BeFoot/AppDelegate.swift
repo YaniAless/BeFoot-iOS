@@ -10,28 +10,27 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-    var window: UIWindow?
-    
-    
+    var window: UIWindow?    
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         let window = UIWindow(frame: UIScreen.main.bounds)
+        
         window.rootViewController = UINavigationController(rootViewController: HomeViewController())
         window.makeKeyAndVisible()
         self.window = window
     
         // Tab bar settings
-       let homeVC = HomeViewController()
-       let dayMatchVC = DayMatchViewController()
-       let pronoVC = PronosticsViewController()
-       
-       let tabBar = UITabBarController()
-       tabBar.viewControllers = [homeVC, dayMatchVC, pronoVC]
-       tabBar.selectedViewController = homeVC
+        let homeVC = HomeViewController()
+        let leaguesVC = LeaguesViewController()
+        let pronoVC = PronosticsViewController()
         
-       window.rootViewController = tabBar
+        let tabBar = UITabBarController()
+    
+        tabBar.viewControllers = [homeVC, leaguesVC, pronoVC]
+        tabBar.selectedViewController = homeVC
+                
+        window.rootViewController = tabBar       
         
         return true
     }
