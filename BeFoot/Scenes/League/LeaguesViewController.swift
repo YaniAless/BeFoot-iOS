@@ -9,8 +9,6 @@
 import UIKit
 
 class LeaguesViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
-    
-    
 
     @IBOutlet var leaguesPicker: UIPickerView!
     
@@ -28,7 +26,10 @@ class LeaguesViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         
         self.title = "Leagues"
         // Do any additional setup after loading the view.
+
     }
+    
+    
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return leagues[row]
