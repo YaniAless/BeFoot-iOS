@@ -10,6 +10,9 @@ import UIKit
 
 class AssistTableViewCell: UITableViewCell {
 
+    @IBOutlet var playerName: UILabel!
+    @IBOutlet var playerAssist: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

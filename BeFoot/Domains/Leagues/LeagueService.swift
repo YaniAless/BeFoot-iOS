@@ -10,6 +10,6 @@ import Foundation
 
 protocol LeagueService {
     
-    func getLeagueRanking(completion: @escaping ([Team]) -> Void)
-    func getTeamById(_ id: Int, completion: @escaping (Team?) -> Void)
+    func getAllLeague(completion: @escaping ([League]) -> Void)
+    func getLeagueById(_ id: Int, completion: @escaping (League?) -> Void)
 }

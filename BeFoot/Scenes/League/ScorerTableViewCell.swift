@@ -10,6 +10,10 @@ import UIKit
 
 class ScorerTableViewCell: UITableViewCell {
 
+    
+    @IBOutlet var playerName: UILabel!
+    @IBOutlet var playerScore: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

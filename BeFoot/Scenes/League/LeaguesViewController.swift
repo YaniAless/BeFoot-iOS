@@ -16,10 +16,22 @@ class LeaguesViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     @IBOutlet var scorersButton: UIButton!
     @IBOutlet var rankButton: UIButton!
     
-    var leagues = ["Bundesliga","Ligue 1","LIGA","Premier League"]
+    var leagues: [String] = []
+
+    
+    var selectedLeague:String = ""
+    var leagueService: LeagueService {
+        return LeagueMockService()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.leagueService.getAllLeague { (leagueList) in
+            self.leagues = leagueList.map { league in
+                return league.leagueName
+            }
+        }
 
         self.leaguesPicker.dataSource = self
         self.leaguesPicker.delegate = self
@@ -28,8 +40,6 @@ class LeaguesViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         // Do any additional setup after loading the view.
 
     }
-    
-    
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return leagues[row]
@@ -43,7 +53,31 @@ class LeaguesViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         return 1
     }
     
+    private func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
+    {
+        self.selectedLeague = leagues[row]
+     }
     
+    
+    @IBAction func rankTouchAction(_ sender: UIButton) {
+        let teamTableViewController = TeamTableViewController()
+        teamTableViewController.league = self.selectedLeague
+        self.present(teamTableViewController, animated: true)
+    }
+    
+    
+    @IBAction func scorersTouchAction(_ sender: UIButton) {
+        let scorerTableViewController = ScorerTableViewController()
+        scorerTableViewController.league = self.selectedLeague
+        self.present(scorerTableViewController, animated: true)
+    }
+    
+    
+    @IBAction func assistTouchAction(_ sender: UIButton) {
+        let assistTableViewController = AssistTableViewController()
+        assistTableViewController.league = self.selectedLeague
+        self.present(assistTableViewController, animated: true)
+    }
     
 
     /*
