@@ -13,16 +13,20 @@ class TeamTableViewController: UIViewController {
     @IBOutlet var teamTableView: UITableView!
     public static let teamTableViewCellId = "ttvc"
     
-    var league: String = ""
+    var league: League
     
-    var teamList: [Team] = [] {
-        didSet {
-            self.teamTableView.reloadData()
-        }
+    var rankCounter: Int = 1
+    
+    init(league: League) {
+        self.league = league
+        self.league.teams = self.league.teams.sorted(by: { $0.teamPoints > $1.teamPoints })
+        super.init(nibName: nil, bundle: nil)
     }
-    var teamService: TeamService {
-        return TeamMockService()
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,13 +38,6 @@ class TeamTableViewController: UIViewController {
         self.teamTableView.register(UINib(nibName: "TeamTableViewCell", bundle: nil), forCellReuseIdentifier: TeamTableViewController.teamTableViewCellId)
         
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        self.teamService.getAll { (teamList) in
-            self.teamList = teamList
-        }
-    }
-    
     
     /*
      // MARK: - Navigation
@@ -56,15 +53,18 @@ class TeamTableViewController: UIViewController {
 
 extension TeamTableViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.teamList.count
+        return self.league.teams.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TeamTableViewController.teamTableViewCellId, for: indexPath) as! TeamTableViewCell
-        let team = self.teamList[indexPath.row]
+        
+         let team = self.league.teams[indexPath.row]
+        
         cell.teamPointsLabel.text = String(team.teamPoints)
         cell.teamNameLabel.text = team.teamName
-        cell.teamRankLabel.text = String(team.teamRank)
+        cell.teamRankLabel.text = String(self.rankCounter)
+        self.rankCounter += 1
         return cell
     }
 }
