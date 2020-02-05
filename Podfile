@@ -5,12 +5,6 @@ target 'BeFoot' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for BeFoot
-  pod 'Firebase/Auth'
-  pod 'Firebase/Firestore'
-
-  pod 'FirebaseUI'
-
   target 'BeFootTests' do
     inherit! :search_paths
     # Pods for testing
