@@ -8,7 +8,6 @@
 
 import Foundation
 import CoreLocation
-import Alamofire
 
 class LeagueServiceApi: LeagueService {  
     
@@ -60,9 +59,7 @@ class LeagueServiceApi: LeagueService {
                 print("Error getting standings", jsonErr)
             }
         }.resume()
-    }
-
-    
+    }    
 }
 
 struct Ranking: Decodable {

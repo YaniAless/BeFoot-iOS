@@ -16,10 +16,14 @@ class TeamTableViewController: UIViewController {
     var league: League
     
     var rankCounter: Int = 1
+    
+    var leagueService: LeagueService {
+        return LeagueServiceApi()
+    }
         
     init(league: League) {
         self.league = league
-        print("TEAM TABLE CONTROLLER -> \(self.league.teams)")
+        print("TEAM TABLE CONTROLLER -> \(self.league)")
         self.league.teams = self.league.teams.sorted(by: { $0.teamPoints > $1.teamPoints })
         
         super.init(nibName: nil, bundle: nil)
@@ -39,7 +43,12 @@ class TeamTableViewController: UIViewController {
         self.teamTableView.delegate = self
         self.teamTableView.register(UINib(nibName: "TeamTableViewCell", bundle: nil), forCellReuseIdentifier: TeamTableViewController.teamTableViewCellId)
         
-            
+        self.leagueService.getLeagueStanding(leagueId: self.league.leagueId) { rank in
+            self.league.teams = rank.teams
+            DispatchQueue.main.async {
+                self.teamTableView.reloadData()
+            }
+        }        
     }
     
     /*

@@ -33,6 +33,7 @@ class ScorerTableViewController: UIViewController {
         self.scorerTableView.delegate = self
         self.scorerTableView.register(UINib(nibName: "ScorerTableViewCell", bundle: nil), forCellReuseIdentifier: ScorerTableViewController.scorerTableViewCellId)
         
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {

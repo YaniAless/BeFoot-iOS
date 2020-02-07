@@ -9,8 +9,8 @@
 import Foundation
 
 struct Player {
-    var playerId: Int
     var playerName: String
-    var goalNumber: Int
-    var assistNumber: Int
+    var goals: Int
+    var assists: Int
+    var nbGames: Int
 }

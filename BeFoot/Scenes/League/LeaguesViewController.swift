@@ -58,11 +58,8 @@ class LeaguesViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     @IBAction func rankTouchAction(_ sender: UIButton) {
         
         let leagueIndex = leaguesPicker.selectedRow(inComponent: 0)
-        self.leagueService.getLeagueStanding(leagueId: leagueList[leagueIndex].leagueId) { rank in
-            self.leagueList[leagueIndex].teams = rank.teams
-            let teamTableViewController = TeamTableViewController(league: self.leagueList[leagueIndex])
-            self.present(teamTableViewController, animated: true)
-        }
+        let teamTableViewController = TeamTableViewController(league: self.leagueList[leagueIndex])
+        self.present(teamTableViewController, animated: true)
         
         
     }
