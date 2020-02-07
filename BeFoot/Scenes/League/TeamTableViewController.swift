@@ -19,6 +19,7 @@ class TeamTableViewController: UIViewController {
         
     init(league: League) {
         self.league = league
+        print("TEAM TABLE CONTROLLER -> \(self.league.teams)")
         self.league.teams = self.league.teams.sorted(by: { $0.teamPoints > $1.teamPoints })
         
         super.init(nibName: nil, bundle: nil)

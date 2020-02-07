@@ -16,36 +16,28 @@ class LeaguesViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     @IBOutlet var scorersButton: UIButton!
     @IBOutlet var rankButton: UIButton!
     
-    var leagues: [String] = []
+    var leagues: [String] = ["Ligue 1", "Premier League","Bundesliga","LIGA","Serie A"]
     var leagueList: [League] = []
-    var ranking: Ranking = Ranking(teams: [Team(teamRank: 1, teamName: "", teamLogo: "", teamPoints: 34, teamGoalDiff: 44)])
-
     
     var selectedLeague:Int = 0
     var leagueService: LeagueService {
-        //return LeagueMockService()
         return LeagueServiceApi()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.title = "Leagues"
+
         self.leagueService.getAllLeague { (leagueList) in
             self.leagueList = leagueList
             self.leagues = leagueList.map { league in
                 return league.leagueName
             }
         }
-        
-        self.leagueService.getLeagueStanding(leagueId: 525) { rank in
-            self.ranking = rank
-        }
 
         self.leaguesPicker.dataSource = self
         self.leaguesPicker.delegate = self
-        
-        self.title = "Leagues"
-        
+                
         // Do any additional setup after loading the view.
 
     }
@@ -64,9 +56,14 @@ class LeaguesViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     
     @IBAction func rankTouchAction(_ sender: UIButton) {
+        
         let leagueIndex = leaguesPicker.selectedRow(inComponent: 0)
-        let teamTableViewController = TeamTableViewController(league: leagueList[leagueIndex])
+        self.leagueService.getLeagueStanding(leagueId: leagueList[leagueIndex].leagueId) { rank in
+            self.leagueList[leagueIndex].teams = rank.teams
+            let teamTableViewController = TeamTableViewController(league: self.leagueList[leagueIndex])
             self.present(teamTableViewController, animated: true)
+        }
+        
         
     }
     
