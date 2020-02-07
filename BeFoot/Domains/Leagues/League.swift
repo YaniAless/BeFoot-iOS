@@ -12,4 +12,5 @@ struct League {
     var leagueId: Int
     var leagueName: String
     var teams: [Team]
+    
 }

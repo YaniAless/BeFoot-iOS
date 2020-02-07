@@ -8,9 +8,11 @@
 
 import Foundation
 
-struct Team {
-    var teamId: Int
-    var teamName: String
-    var teamPoints: Int
+struct Team: Decodable {
+    //var teamId: Int
     var teamRank: Int
+    var teamName: String
+    var teamLogo: String
+    var teamPoints: Int
+    var teamGoalDiff: Int
 }

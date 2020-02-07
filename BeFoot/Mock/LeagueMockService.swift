@@ -10,30 +10,39 @@ import Foundation
 import CoreLocation
 
 class LeagueMockService: LeagueService {
+    func getLeagueStanding(leagueId: Int, completion: @escaping (Ranking) -> Void) {
+        let team: Team = Team(teamRank: 99, teamName: "ttt", teamLogo: "ttt", teamPoints: 12, teamGoalDiff: 123)
+        let r: Ranking = Ranking(teams: [team])
+        completion(r)
+    }
+    
     
     private let leagueList : [League] = [
         League(leagueId: 1, leagueName: "Ligue 1", teams: [
-            Team(teamId: 0, teamName: "Paris-Saint-Germain", teamPoints: 60, teamRank: 1),
-            Team(teamId: 1, teamName: "Olympique de Marseille", teamPoints: 50, teamRank: 2),
-            Team(teamId: 2, teamName: "Olympique Lyonnais", teamPoints: 40, teamRank: 3),
-            Team(teamId: 3, teamName: "AS Monaco", teamPoints: 30, teamRank: 4),
-            Team(teamId: 4, teamName: "Saint-Etienne", teamPoints: 20, teamRank: 5)
+            Team(teamRank: 1, teamName: "Paris", teamLogo: "LOGO", teamPoints: 99, teamGoalDiff: 99),
+            Team(teamRank: 2, teamName: "Paris", teamLogo: "LOGO", teamPoints: 99, teamGoalDiff: 99),
+            Team(teamRank: 3, teamName: "Paris", teamLogo: "LOGO", teamPoints: 99, teamGoalDiff: 99),
+            Team(teamRank: 4, teamName: "Paris", teamLogo: "LOGO", teamPoints: 99, teamGoalDiff: 99),
+            Team(teamRank: 5, teamName: "Paris", teamLogo: "LOGO", teamPoints: 99, teamGoalDiff: 99),
+            Team(teamRank: 6, teamName: "Paris", teamLogo: "LOGO", teamPoints: 99, teamGoalDiff: 99)
         ]
             ),
         League(leagueId: 2, leagueName: "Bundesliga", teams: [
-            Team(teamId: 0, teamName: "Paris-Saint-Germain", teamPoints: 60, teamRank: 2),
-            Team(teamId: 1, teamName: "Olympique de Marseille", teamPoints: 70, teamRank: 1),
-            Team(teamId: 2, teamName: "Olympique Lyonnais", teamPoints: 40, teamRank: 3),
-            Team(teamId: 3, teamName: "AS Monaco", teamPoints: 30, teamRank: 4),
-            Team(teamId: 4, teamName: "Saint-Etienne", teamPoints: 20, teamRank: 5)
+            Team(teamRank: 1, teamName: "Paris", teamLogo: "LOGO", teamPoints: 99, teamGoalDiff: 99),
+            Team(teamRank: 2, teamName: "Paris", teamLogo: "LOGO", teamPoints: 99, teamGoalDiff: 99),
+            Team(teamRank: 3, teamName: "Paris", teamLogo: "LOGO", teamPoints: 99, teamGoalDiff: 99),
+            Team(teamRank: 4, teamName: "Paris", teamLogo: "LOGO", teamPoints: 99, teamGoalDiff: 99),
+            Team(teamRank: 5, teamName: "Paris", teamLogo: "LOGO", teamPoints: 99, teamGoalDiff: 99),
+            Team(teamRank: 6, teamName: "Paris", teamLogo: "LOGO", teamPoints: 99, teamGoalDiff: 99)
         ]
             ),
         League(leagueId: 3, leagueName: "Premier League", teams: [
-            Team(teamId: 0, teamName: "Paris-Saint-Germain", teamPoints: 60, teamRank: 1),
-            Team(teamId: 1, teamName: "Olympique de Marseille", teamPoints: 50, teamRank: 2),
-            Team(teamId: 2, teamName: "Olympique Lyonnais", teamPoints: 40, teamRank: 3),
-            Team(teamId: 3, teamName: "AS Monaco", teamPoints: 30, teamRank: 4),
-            Team(teamId: 4, teamName: "Saint-Etienne", teamPoints: 20, teamRank: 5)
+            Team(teamRank: 1, teamName: "Paris", teamLogo: "LOGO", teamPoints: 99, teamGoalDiff: 99),
+            Team(teamRank: 2, teamName: "Paris", teamLogo: "LOGO", teamPoints: 99, teamGoalDiff: 99),
+            Team(teamRank: 3, teamName: "Paris", teamLogo: "LOGO", teamPoints: 99, teamGoalDiff: 99),
+            Team(teamRank: 4, teamName: "Paris", teamLogo: "LOGO", teamPoints: 99, teamGoalDiff: 99),
+            Team(teamRank: 5, teamName: "Paris", teamLogo: "LOGO", teamPoints: 99, teamGoalDiff: 99),
+            Team(teamRank: 6, teamName: "Paris", teamLogo: "LOGO", teamPoints: 99, teamGoalDiff: 99)
         ]
             ),
     ]

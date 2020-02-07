@@ -18,11 +18,13 @@ class LeaguesViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     var leagues: [String] = []
     var leagueList: [League] = []
+    var ranking: Ranking = Ranking(teams: [Team(teamRank: 1, teamName: "", teamLogo: "", teamPoints: 34, teamGoalDiff: 44)])
 
     
     var selectedLeague:Int = 0
     var leagueService: LeagueService {
-        return LeagueMockService()
+        //return LeagueMockService()
+        return LeagueServiceApi()
     }
     
     override func viewDidLoad() {
@@ -34,11 +36,16 @@ class LeaguesViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
                 return league.leagueName
             }
         }
+        
+        self.leagueService.getLeagueStanding(leagueId: 525) { rank in
+            self.ranking = rank
+        }
 
         self.leaguesPicker.dataSource = self
         self.leaguesPicker.delegate = self
         
         self.title = "Leagues"
+        
         // Do any additional setup after loading the view.
 
     }

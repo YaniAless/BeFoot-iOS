@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -38,6 +38,7 @@
 		2FDC291B23AA97DF00367401 /* BeFootTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDC291A23AA97DF00367401 /* BeFootTests.swift */; };
 		2FDC292623AA97DF00367401 /* BeFootUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDC292523AA97DF00367401 /* BeFootUITests.swift */; };
 		3FC93FF008A19860796EB6DC /* Pods_BeFoot_BeFootUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44200C978C44601AC2B8AEF4 /* Pods_BeFoot_BeFootUITests.framework */; };
+		5B18626D23ECBFE500ACB082 /* LeagueServiceApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B18626C23ECBFE500ACB082 /* LeagueServiceApi.swift */; };
 		5B811E8A23E31CEF00B756A2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B811E8923E31CEF00B756A2 /* GoogleService-Info.plist */; };
 		5BA7BDA423E4334D00A1F507 /* LeaguesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA7BDA223E4334D00A1F507 /* LeaguesViewController.swift */; };
 		5BA7BDA523E4334D00A1F507 /* LeaguesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BA7BDA323E4334D00A1F507 /* LeaguesViewController.xib */; };
@@ -110,6 +111,7 @@
 		2FDC292723AA97DF00367401 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44200C978C44601AC2B8AEF4 /* Pods_BeFoot_BeFootUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeFoot_BeFootUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CE1E42D7B95053E077655EE /* Pods_BeFoot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeFoot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B18626C23ECBFE500ACB082 /* LeagueServiceApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueServiceApi.swift; sourceTree = "<group>"; };
 		5B811E8923E31CEF00B756A2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5BA7BDA223E4334D00A1F507 /* LeaguesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesViewController.swift; sourceTree = "<group>"; };
 		5BA7BDA323E4334D00A1F507 /* LeaguesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeaguesViewController.xib; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 		2FDC290223AA97DB00367401 /* BeFoot */ = {
 			isa = PBXGroup;
 			children = (
+				5B18626B23ECBE9700ACB082 /* API */,
 				2F3C8BF623DB672E00B0CF35 /* Mock */,
 				2F3C8BEE23DB634C00B0CF35 /* Domains */,
 				2FCAA42E23C8E5D90096D839 /* Scenes */,
@@ -266,6 +269,14 @@
 				2FDC292723AA97DF00367401 /* Info.plist */,
 			);
 			path = BeFootUITests;
+			sourceTree = "<group>";
+		};
+		5B18626B23ECBE9700ACB082 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				5B18626C23ECBFE500ACB082 /* LeagueServiceApi.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		5BA7BDA123E4333500A1F507 /* League */ = {
@@ -336,8 +347,7 @@
 				2FDC28FC23AA97DB00367401 /* Sources */,
 				2FDC28FD23AA97DB00367401 /* Frameworks */,
 				2FDC28FE23AA97DB00367401 /* Resources */,
-				29C0752D5A6EB4D98563237C /* [CP] Embed Pods Frameworks */,
-				98AC6E9CFD315F6A6FF6A581 /* [CP] Copy Pods Resources */,
+				8D9D34343D53F8E9035AA76E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -375,8 +385,7 @@
 				2FDC291D23AA97DF00367401 /* Sources */,
 				2FDC291E23AA97DF00367401 /* Frameworks */,
 				2FDC291F23AA97DF00367401 /* Resources */,
-				2BB81663BCAA8F55E05E9702 /* [CP] Embed Pods Frameworks */,
-				85A82FC7105B74020F494E7E /* [CP] Copy Pods Resources */,
+				2B9D8046FD013B260E532025 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -491,24 +500,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		29C0752D5A6EB4D98563237C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BeFoot/Pods-BeFoot-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BeFoot/Pods-BeFoot-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BeFoot/Pods-BeFoot-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2BB81663BCAA8F55E05E9702 /* [CP] Embed Pods Frameworks */ = {
+		2B9D8046FD013B260E532025 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -547,21 +539,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		85A82FC7105B74020F494E7E /* [CP] Copy Pods Resources */ = {
+		8D9D34343D53F8E9035AA76E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BeFoot-BeFootUITests/Pods-BeFoot-BeFootUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-BeFoot/Pods-BeFoot-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BeFoot-BeFootUITests/Pods-BeFoot-BeFootUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-BeFoot/Pods-BeFoot-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BeFoot-BeFootUITests/Pods-BeFoot-BeFootUITests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BeFoot/Pods-BeFoot-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		92957A705D9717120ED723AF /* [CP] Check Pods Manifest.lock */ = {
@@ -586,23 +578,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		98AC6E9CFD315F6A6FF6A581 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BeFoot/Pods-BeFoot-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BeFoot/Pods-BeFoot-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BeFoot/Pods-BeFoot-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -622,6 +597,7 @@
 				2F4602FF23E8CDCB00FDAA29 /* PlayerMockService.swift in Sources */,
 				2F4602F723E8CD1D00FDAA29 /* TeamService.swift in Sources */,
 				2F4602EC23E8CB0600FDAA29 /* ScorerTableViewController.swift in Sources */,
+				5B18626D23ECBFE500ACB082 /* LeagueServiceApi.swift in Sources */,
 				2F46030223E8D87100FDAA29 /* ScorerTableViewCell.swift in Sources */,
 				2F4602FB23E8CDB300FDAA29 /* TeamMockService.swift in Sources */,
 				2F46030623E8D97300FDAA29 /* AssistTableViewCell.swift in Sources */,

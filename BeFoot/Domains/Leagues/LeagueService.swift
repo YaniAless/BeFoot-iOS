@@ -12,4 +12,5 @@ protocol LeagueService {
     
     func getAllLeague(completion: @escaping ([League]) -> Void)
     func getLeagueById(_ id: Int, completion: @escaping (League?) -> Void)
+    func getLeagueStanding(leagueId: Int, completion: @escaping (Ranking) -> Void)
 }

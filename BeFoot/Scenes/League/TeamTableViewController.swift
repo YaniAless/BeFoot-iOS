@@ -16,10 +16,11 @@ class TeamTableViewController: UIViewController {
     var league: League
     
     var rankCounter: Int = 1
-    
+        
     init(league: League) {
         self.league = league
         self.league.teams = self.league.teams.sorted(by: { $0.teamPoints > $1.teamPoints })
+        
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -37,6 +38,7 @@ class TeamTableViewController: UIViewController {
         self.teamTableView.delegate = self
         self.teamTableView.register(UINib(nibName: "TeamTableViewCell", bundle: nil), forCellReuseIdentifier: TeamTableViewController.teamTableViewCellId)
         
+            
     }
     
     /*
