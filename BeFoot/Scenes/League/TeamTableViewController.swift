@@ -15,8 +15,6 @@ class TeamTableViewController: UIViewController {
     
     var league: League
     
-    var rankCounter: Int = 1
-    
     var leagueService: LeagueService {
         return LeagueServiceApi()
     }
@@ -64,8 +62,7 @@ extension TeamTableViewController: UITableViewDataSource {
         
         cell.teamPointsLabel.text = String(team.teamPoints)
         cell.teamNameLabel.text = team.teamName
-        cell.teamRankLabel.text = String(self.rankCounter)
-        self.rankCounter += 1
+        cell.teamRankLabel.text = String(team.teamRank)
         return cell
     }
 }

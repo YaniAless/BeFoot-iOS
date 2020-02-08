@@ -18,7 +18,7 @@ class PlayerServiceApi: PlayerService {
     }
     
     func getBestScorersByLeagueId(leagueId: Int, completion: @escaping (Players) -> Void) {
-        let jsonUrlString = "\(LOCAL_HOST)topscorers/\(leagueId)"
+        let jsonUrlString = "\(REMOTE_HOST)topscorers/\(leagueId)"
         
         guard let url = URL(string: jsonUrlString) else { return }
         

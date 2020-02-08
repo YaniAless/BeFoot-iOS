@@ -37,7 +37,7 @@ class LeagueServiceApi: LeagueService {
     }
     
     func getLeagueStanding(leagueId: Int, completion: @escaping (Ranking) -> Void) {
-        let jsonUrlString = "\(LOCAL_HOST)standing/\(leagueId)"
+        let jsonUrlString = "\(REMOTE_HOST)standing/\(leagueId)"
         guard let url = URL(string: jsonUrlString) else { return }
         
         URLSession.shared.dataTask(with: url) { (data, res, err) in
