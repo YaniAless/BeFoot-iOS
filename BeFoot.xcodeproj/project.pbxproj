@@ -16,8 +16,6 @@
 		2F4602E923E8C9F800FDAA29 /* TeamTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F4602E723E8C9F800FDAA29 /* TeamTableViewController.xib */; };
 		2F4602EC23E8CB0600FDAA29 /* ScorerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4602EA23E8CB0600FDAA29 /* ScorerTableViewController.swift */; };
 		2F4602ED23E8CB0600FDAA29 /* ScorerTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F4602EB23E8CB0600FDAA29 /* ScorerTableViewController.xib */; };
-		2F4602F023E8CBFC00FDAA29 /* AssistTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4602EE23E8CBFC00FDAA29 /* AssistTableViewController.swift */; };
-		2F4602F123E8CBFC00FDAA29 /* AssistTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F4602EF23E8CBFC00FDAA29 /* AssistTableViewController.xib */; };
 		2F4602F523E8CCBD00FDAA29 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4602F423E8CCBD00FDAA29 /* Player.swift */; };
 		2F4602F723E8CD1D00FDAA29 /* TeamService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4602F623E8CD1D00FDAA29 /* TeamService.swift */; };
 		2F4602F923E8CD2900FDAA29 /* PlayerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4602F823E8CD2900FDAA29 /* PlayerService.swift */; };
@@ -25,8 +23,6 @@
 		2F4602FF23E8CDCB00FDAA29 /* PlayerMockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4602FE23E8CDCB00FDAA29 /* PlayerMockService.swift */; };
 		2F46030223E8D87100FDAA29 /* ScorerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F46030023E8D87100FDAA29 /* ScorerTableViewCell.swift */; };
 		2F46030323E8D87100FDAA29 /* ScorerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F46030123E8D87100FDAA29 /* ScorerTableViewCell.xib */; };
-		2F46030623E8D97300FDAA29 /* AssistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F46030423E8D97300FDAA29 /* AssistTableViewCell.swift */; };
-		2F46030723E8D97300FDAA29 /* AssistTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F46030523E8D97300FDAA29 /* AssistTableViewCell.xib */; };
 		2FCAA42C23C8E1A30096D839 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCAA42A23C8E1A30096D839 /* HomeViewController.swift */; };
 		2FCAA42D23C8E1A30096D839 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FCAA42B23C8E1A30096D839 /* HomeViewController.xib */; };
 		2FCAA43823C8E65A0096D839 /* PronosticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCAA43623C8E65A0096D839 /* PronosticsViewController.swift */; };
@@ -83,8 +79,6 @@
 		2F4602E723E8C9F800FDAA29 /* TeamTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamTableViewController.xib; sourceTree = "<group>"; };
 		2F4602EA23E8CB0600FDAA29 /* ScorerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorerTableViewController.swift; sourceTree = "<group>"; };
 		2F4602EB23E8CB0600FDAA29 /* ScorerTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScorerTableViewController.xib; sourceTree = "<group>"; };
-		2F4602EE23E8CBFC00FDAA29 /* AssistTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistTableViewController.swift; sourceTree = "<group>"; };
-		2F4602EF23E8CBFC00FDAA29 /* AssistTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AssistTableViewController.xib; sourceTree = "<group>"; };
 		2F4602F423E8CCBD00FDAA29 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		2F4602F623E8CD1D00FDAA29 /* TeamService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamService.swift; sourceTree = "<group>"; };
 		2F4602F823E8CD2900FDAA29 /* PlayerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerService.swift; sourceTree = "<group>"; };
@@ -92,8 +86,6 @@
 		2F4602FE23E8CDCB00FDAA29 /* PlayerMockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerMockService.swift; sourceTree = "<group>"; };
 		2F46030023E8D87100FDAA29 /* ScorerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorerTableViewCell.swift; sourceTree = "<group>"; };
 		2F46030123E8D87100FDAA29 /* ScorerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScorerTableViewCell.xib; sourceTree = "<group>"; };
-		2F46030423E8D97300FDAA29 /* AssistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistTableViewCell.swift; sourceTree = "<group>"; };
-		2F46030523E8D97300FDAA29 /* AssistTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AssistTableViewCell.xib; sourceTree = "<group>"; };
 		2FCAA42A23C8E1A30096D839 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2FCAA42B23C8E1A30096D839 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		2FCAA43623C8E65A0096D839 /* PronosticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PronosticsViewController.swift; sourceTree = "<group>"; };
@@ -293,12 +285,8 @@
 				2F4602E723E8C9F800FDAA29 /* TeamTableViewController.xib */,
 				2F4602EA23E8CB0600FDAA29 /* ScorerTableViewController.swift */,
 				2F4602EB23E8CB0600FDAA29 /* ScorerTableViewController.xib */,
-				2F4602EE23E8CBFC00FDAA29 /* AssistTableViewController.swift */,
-				2F4602EF23E8CBFC00FDAA29 /* AssistTableViewController.xib */,
 				2F46030023E8D87100FDAA29 /* ScorerTableViewCell.swift */,
 				2F46030123E8D87100FDAA29 /* ScorerTableViewCell.xib */,
-				2F46030423E8D97300FDAA29 /* AssistTableViewCell.swift */,
-				2F46030523E8D97300FDAA29 /* AssistTableViewCell.xib */,
 			);
 			path = League;
 			sourceTree = "<group>";
@@ -448,13 +436,11 @@
 			files = (
 				5BA7BDAD23E43E6800A1F507 /* TeamTableViewCell.xib in Resources */,
 				2F46030323E8D87100FDAA29 /* ScorerTableViewCell.xib in Resources */,
-				2F4602F123E8CBFC00FDAA29 /* AssistTableViewController.xib in Resources */,
 				2FDC291023AA97DE00367401 /* LaunchScreen.storyboard in Resources */,
 				5BA7BDA523E4334D00A1F507 /* LeaguesViewController.xib in Resources */,
 				5B811E8A23E31CEF00B756A2 /* GoogleService-Info.plist in Resources */,
 				2F3C8BED23DB60D500B0CF35 /* MatchTableViewCell.xib in Resources */,
 				2F4602E923E8C9F800FDAA29 /* TeamTableViewController.xib in Resources */,
-				2F46030723E8D97300FDAA29 /* AssistTableViewCell.xib in Resources */,
 				2FCAA43923C8E65A0096D839 /* PronosticsViewController.xib in Resources */,
 				2FDC290D23AA97DE00367401 /* Assets.xcassets in Resources */,
 				2FCAA42D23C8E1A30096D839 /* HomeViewController.xib in Resources */,
@@ -568,7 +554,6 @@
 				5B18626D23ECBFE500ACB082 /* LeagueServiceApi.swift in Sources */,
 				2F46030223E8D87100FDAA29 /* ScorerTableViewCell.swift in Sources */,
 				2F4602FB23E8CDB300FDAA29 /* TeamMockService.swift in Sources */,
-				2F46030623E8D97300FDAA29 /* AssistTableViewCell.swift in Sources */,
 				5BA7BDB823E4414500A1F507 /* League.swift in Sources */,
 				2F3C8BF823DB673B00B0CF35 /* MatchMockService.swift in Sources */,
 				5BA7BDAC23E43E6800A1F507 /* TeamTableViewCell.swift in Sources */,
@@ -577,7 +562,6 @@
 				2F4602F923E8CD2900FDAA29 /* PlayerService.swift in Sources */,
 				2FCAA42C23C8E1A30096D839 /* HomeViewController.swift in Sources */,
 				5BA7BDA423E4334D00A1F507 /* LeaguesViewController.swift in Sources */,
-				2F4602F023E8CBFC00FDAA29 /* AssistTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
