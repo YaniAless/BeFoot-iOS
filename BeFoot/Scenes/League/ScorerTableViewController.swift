@@ -17,18 +17,12 @@ class ScorerTableViewController: UIViewController {
  
     var scorerList: [Player] = []
     
-    /*
-    var playerService: PlayerService {
-        return PlayerMockService()
-    } */
-    
     var playerServiceAPI: PlayerService {
         return PlayerServiceApi()
     }
     
     init(leagueId: Int) {
         self.leagueId = leagueId
-        //self.scorerList.teams = self.league.teams.sorted(by: { $0.teamPoints > $1.teamPoints })
         
         super.init(nibName: nil, bundle: nil)
     }
@@ -39,31 +33,19 @@ class ScorerTableViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "List"
         
-        // self.matchTableView.rowHeight = 50
         self.scorerTableView.dataSource = self
         self.scorerTableView.delegate = self
         self.scorerTableView.register(UINib(nibName: "ScorerTableViewCell", bundle: nil), forCellReuseIdentifier: ScorerTableViewController.scorerTableViewCellId)
         
         self.playerServiceAPI.getBestScorersByLeagueId(leagueId: self.leagueId) { scorers in
             
-            self.scorerList = scorers.players
-            
+            self.scorerList = scorers.players            
             DispatchQueue.main.async {
                 self.scorerTableView.reloadData()
             }
-            
         }
-                
     }
-    /*
-    override func viewDidAppear(_ animated: Bool) {
-        self.playerService.getAll { (scorerList) in
-            self.scorerList = scorerList
-        }
-    }*/
-    
 }
 
 extension ScorerTableViewController: UITableViewDataSource {

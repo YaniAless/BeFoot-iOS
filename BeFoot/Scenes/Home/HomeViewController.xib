@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="BeFoot" customModuleProvider="target">
             <connections>
+                <outlet property="datePicker" destination="1X9-Zj-sJO" id="Mgt-vk-Ung"/>
                 <outlet property="matchTableView" destination="xPT-Wf-CUQ" id="6nB-Je-cyL"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

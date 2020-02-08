@@ -36,6 +36,7 @@
 		3FC93FF008A19860796EB6DC /* Pods_BeFoot_BeFootUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44200C978C44601AC2B8AEF4 /* Pods_BeFoot_BeFootUITests.framework */; };
 		5B18626D23ECBFE500ACB082 /* LeagueServiceApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B18626C23ECBFE500ACB082 /* LeagueServiceApi.swift */; };
 		5B18627123EED59100ACB082 /* PlayerServiceApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B18627023EED59100ACB082 /* PlayerServiceApi.swift */; };
+		5B18627423EF228800ACB082 /* MatchServiceApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B18627323EF228800ACB082 /* MatchServiceApi.swift */; };
 		5B811E8A23E31CEF00B756A2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B811E8923E31CEF00B756A2 /* GoogleService-Info.plist */; };
 		5BA7BDA423E4334D00A1F507 /* LeaguesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA7BDA223E4334D00A1F507 /* LeaguesViewController.swift */; };
 		5BA7BDA523E4334D00A1F507 /* LeaguesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BA7BDA323E4334D00A1F507 /* LeaguesViewController.xib */; };
@@ -106,6 +107,7 @@
 		4CE1E42D7B95053E077655EE /* Pods_BeFoot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeFoot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B18626C23ECBFE500ACB082 /* LeagueServiceApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueServiceApi.swift; sourceTree = "<group>"; };
 		5B18627023EED59100ACB082 /* PlayerServiceApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerServiceApi.swift; sourceTree = "<group>"; };
+		5B18627323EF228800ACB082 /* MatchServiceApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchServiceApi.swift; sourceTree = "<group>"; };
 		5B811E8923E31CEF00B756A2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5BA7BDA223E4334D00A1F507 /* LeaguesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesViewController.swift; sourceTree = "<group>"; };
 		5BA7BDA323E4334D00A1F507 /* LeaguesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeaguesViewController.xib; sourceTree = "<group>"; };
@@ -270,6 +272,7 @@
 			children = (
 				5B18626C23ECBFE500ACB082 /* LeagueServiceApi.swift */,
 				5B18627023EED59100ACB082 /* PlayerServiceApi.swift */,
+				5B18627323EF228800ACB082 /* MatchServiceApi.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -547,6 +550,7 @@
 				2F3C8BEC23DB60D500B0CF35 /* MatchTableViewCell.swift in Sources */,
 				2F4602F523E8CCBD00FDAA29 /* Player.swift in Sources */,
 				2F3C8BF423DB638400B0CF35 /* MatchService.swift in Sources */,
+				5B18627423EF228800ACB082 /* MatchServiceApi.swift in Sources */,
 				2F4602FF23E8CDCB00FDAA29 /* PlayerMockService.swift in Sources */,
 				2F4602F723E8CD1D00FDAA29 /* TeamService.swift in Sources */,
 				5B18627123EED59100ACB082 /* PlayerServiceApi.swift in Sources */,

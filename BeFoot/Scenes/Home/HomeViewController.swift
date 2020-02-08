@@ -9,48 +9,40 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+      
     
-    
+    @IBOutlet var datePicker: UIDatePicker!
     @IBOutlet var matchTableView: UITableView!
     public static let MatchTableViewCellId = "mtvc"
     
-    var matchList: [Match] = [] {
-        didSet {
-            self.matchTableView.reloadData()
-        }
-    }
-    var matchService: MatchService {
-        return MatchMockService()
-    }
+    var matchList: [Match] = []
     
+    var matchService: MatchService {
+        return MatchServiceApi()
+    }
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Home"
         
-        // self.matchTableView.rowHeight = 50
         self.matchTableView.dataSource = self
         self.matchTableView.delegate = self
         self.matchTableView.register(UINib(nibName: "MatchTableViewCell", bundle: nil), forCellReuseIdentifier: HomeViewController.MatchTableViewCellId)
         
+        
+        getMatches(date: datePicker.date)
+        
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        self.matchService.getAll { (matchList) in
-            self.matchList = matchList
+    func getMatches(date: Date){
+        
+        self.matchService.getByDate(date: "2020-02-08", leagueId: 525) { matches in
+            self.matchList = matches.fixtures
+            DispatchQueue.main.async {
+                self.matchTableView.reloadData()
+            }
         }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 extension HomeViewController: UITableViewDataSource {
@@ -60,12 +52,31 @@ extension HomeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: HomeViewController.MatchTableViewCellId, for: indexPath) as! MatchTableViewCell
-        let match = self.matchList[indexPath.row]
-        cell.nameFirst.text = match.nameFirst
-        cell.nameSecond.text = match.nameSecond
-        cell.scoreFirst.text = String(match.scoreFirst)
-        cell.scoreSecond.text = String(match.scoreSecond)
-        return cell
+        
+        if matchList.count > 0 {
+            let match = self.matchList[indexPath.row]
+            print(match)
+            cell.homeTeamName.text = match.homeTeamName
+            //cell.homeTeamLogo.image = UIImage(
+            cell.awayTeamName.text = match.awayTeamName
+            //cell.awayTeamLogo.image = UIImage(cgImage: CGImage)
+
+            
+            if let homeScore = match.homeTeamScore {
+                cell.homeTeamScore.text = String(homeScore)
+            } else {
+                cell.homeTeamScore.text = "-"
+            }
+            
+            if let awayScore = match.homeTeamScore {
+                cell.awayTeamScore.text = String(awayScore)
+            } else {
+                cell.awayTeamScore.text = "-"
+            }
+        }
+        
+        return cell     
+        
     }
 }
 

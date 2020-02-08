@@ -33,9 +33,7 @@ class TeamTableViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "List"
-        
-        // self.matchTableView.rowHeight = 50
+
         self.teamTableView.dataSource = self
         self.teamTableView.delegate = self
         self.teamTableView.register(UINib(nibName: "TeamTableViewCell", bundle: nil), forCellReuseIdentifier: TeamTableViewController.teamTableViewCellId)

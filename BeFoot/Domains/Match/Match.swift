@@ -8,10 +8,13 @@
 
 import Foundation
 
-struct Match {
-    var id: String
-    var nameFirst: String
-    var nameSecond: String
-    var scoreFirst: Int
-    var scoreSecond: Int
+struct Match: Decodable {
+    let fixtureId: Int
+    let matchDate: String
+    let homeTeamName: String
+    let homeTeamLogo: String
+    let homeTeamScore: Int?
+    let awayTeamName: String
+    let awayTeamLogo: String
+    let awayTeamScore: Int?
 }
