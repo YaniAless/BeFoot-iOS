@@ -8,8 +8,9 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, UITableViewDelegate {
       
+    
     
     @IBOutlet var datePicker: UIDatePicker!
     @IBOutlet var matchTableView: UITableView!
@@ -28,20 +29,29 @@ class HomeViewController: UIViewController {
         self.matchTableView.dataSource = self
         self.matchTableView.delegate = self
         self.matchTableView.register(UINib(nibName: "MatchTableViewCell", bundle: nil), forCellReuseIdentifier: HomeViewController.MatchTableViewCellId)
-        
-        
-        getMatches(date: datePicker.date)
-        
+        getMatches()
     }
     
-    func getMatches(date: Date){
+    func getDate(date: Date) -> String{
+        let df = DateFormatter()
+        df.dateFormat = "yyyy-MM-dd"
+        let date = df.string(from: datePicker.date)
         
-        self.matchService.getByDate(date: "2020-02-08", leagueId: 525) { matches in
+        return date
+    }
+    
+    func getMatches(){
+        
+        self.matchService.getByDate(date: getDate(date: datePicker.date), leagueId: 525) { matches in
             self.matchList = matches.fixtures
             DispatchQueue.main.async {
                 self.matchTableView.reloadData()
             }
         }
+    }
+    
+    @IBAction func datePickerChanged(_ sender: Any) {
+        getMatches()
     }
 }
 
@@ -55,7 +65,6 @@ extension HomeViewController: UITableViewDataSource {
         
         if matchList.count > 0 {
             let match = self.matchList[indexPath.row]
-            print(match)
             cell.homeTeamName.text = match.homeTeamName
             //cell.homeTeamLogo.image = UIImage(
             cell.awayTeamName.text = match.awayTeamName
@@ -74,12 +83,10 @@ extension HomeViewController: UITableViewDataSource {
                 cell.awayTeamScore.text = "-"
             }
         }
-        
-        return cell     
-        
+        return cell
     }
-}
-
-extension HomeViewController: UITableViewDelegate {
+    
+    
+    
     
 }
