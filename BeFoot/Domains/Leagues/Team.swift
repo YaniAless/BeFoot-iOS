@@ -9,7 +9,6 @@
 import Foundation
 
 struct Team: Decodable {
-    //var teamId: Int
     var teamRank: Int
     var teamName: String
     var teamLogo: String

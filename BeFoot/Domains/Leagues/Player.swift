@@ -8,9 +8,9 @@
 
 import Foundation
 
-struct Player {
+struct Player: Decodable {
     var playerName: String
     var goals: Int
-    var assists: Int
+    var assists: Int?
     var nbGames: Int
 }

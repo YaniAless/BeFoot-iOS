@@ -9,20 +9,12 @@
 import Foundation
 import CoreLocation
 
-class LeagueServiceApi: LeagueService {  
-    
+class LeagueServiceApi: LeagueService {
     
     private let LOCAL_HOST: String = "http://localhost:3000/"
     private let REMOTE_HOST: String = "https://befoot.herokuapp.com/"
     private var leagueList: [League] = []
     private let emptyTeam: [Team] = []
-    /*private let leagueList: [League] = [League(leagueId: 525, leagueName: "Ligue 1"),
-                                        League(leagueId: 524, leagueName: "Premier League"),
-                                        League(leagueId: 775, leagueName: "Liga"),
-                                        League(leagueId: 775, leagueName: "Bundesliga"),
-                                        League(leagueId: 775, leagueName: "Serie A")]
-
-    */
     private let leaguesInfos: Dictionary<Int, String> = [754: "Bundesliga",
                                                          775: "Liga",
                                                          525: "Ligue 1",
@@ -50,7 +42,6 @@ class LeagueServiceApi: LeagueService {
         
         URLSession.shared.dataTask(with: url) { (data, res, err) in
             guard let data = data else { return }
-            
             do {
                 let teams = try JSONDecoder().decode(Ranking.self, from: data)
                 completion(teams)
@@ -59,7 +50,8 @@ class LeagueServiceApi: LeagueService {
                 print("Error getting standings", jsonErr)
             }
         }.resume()
-    }    
+    }
+
 }
 
 struct Ranking: Decodable {

@@ -10,6 +10,10 @@ import Foundation
 import CoreLocation
 
 class LeagueMockService: LeagueService {
+    func getLeagueBestScorers(leagueId: Int, completion: @escaping (Players) -> Void) {
+        
+    }
+    
     func getLeagueStanding(leagueId: Int, completion: @escaping (Ranking) -> Void) {
         let team: Team = Team(teamRank: 99, teamName: "ttt", teamLogo: "ttt", teamPoints: 12, teamGoalDiff: 123)
         let r: Ranking = Ranking(teams: [team])

@@ -9,12 +9,17 @@
 import Foundation
 
 class PlayerMockService: PlayerService {
+    func getBestScorersByLeagueId(leagueId: Int, completion: @escaping (Players) -> Void) {
+        let p = Players(players: playerList)
+        completion(p)
+    }
+    
     
     private let playerList : [Player] = [
-        Player(playerId: 1, playerName: "Zidane", goalNumber: 86, assistNumber: 43),
-        Player(playerId: 2, playerName: "Ronaldino", goalNumber: 113, assistNumber: 52),
-        Player(playerId: 3, playerName: "CR7", goalNumber: 38, assistNumber: 12),
-        Player(playerId: 4, playerName: "Kaka", goalNumber: 72, assistNumber: 34)
+        Player(playerName: "Del Piero", goals: 100, assists: 999, nbGames: 10),
+        Player(playerName: "Cristiano Ronaldo", goals: 2000, assists: 100, nbGames: 50),
+        Player(playerName: "Ronaldo", goals: 100, assists: 999, nbGames: 10),
+        Player(playerName: "Kaka", goals: 100, assists: 999, nbGames: 10)
     ]
     
     func getAll(completion: @escaping ([Player]) -> Void) {

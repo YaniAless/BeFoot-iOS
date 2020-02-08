@@ -12,6 +12,7 @@ class AssistTableViewCell: UITableViewCell {
 
     @IBOutlet var playerName: UILabel!
     @IBOutlet var playerAssist: UILabel!
+    @IBOutlet var playerRank: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

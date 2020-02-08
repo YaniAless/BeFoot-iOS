@@ -27,6 +27,7 @@ class LeaguesViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Leagues"
+        self.leagues = self.leagues.sorted(by: { $0 > $1 })
 
         self.leagueService.getAllLeague { (leagueList) in
             self.leagueList = leagueList
@@ -67,8 +68,8 @@ class LeaguesViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     @IBAction func scorersTouchAction(_ sender: UIButton) {
         let leagueIndex = leaguesPicker.selectedRow(inComponent: 0)
-        let scorerTableViewController = TeamTableViewController(league: leagueList[leagueIndex])
-        self.present(scorerTableViewController, animated: true)
+        let scorerTableViewController = ScorerTableViewController(leagueId: self.leagueList[leagueIndex].leagueId)
+            self.present(scorerTableViewController, animated: true)
     }
     
     

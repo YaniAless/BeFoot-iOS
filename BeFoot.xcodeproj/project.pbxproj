@@ -39,6 +39,7 @@
 		2FDC292623AA97DF00367401 /* BeFootUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDC292523AA97DF00367401 /* BeFootUITests.swift */; };
 		3FC93FF008A19860796EB6DC /* Pods_BeFoot_BeFootUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44200C978C44601AC2B8AEF4 /* Pods_BeFoot_BeFootUITests.framework */; };
 		5B18626D23ECBFE500ACB082 /* LeagueServiceApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B18626C23ECBFE500ACB082 /* LeagueServiceApi.swift */; };
+		5B18627123EED59100ACB082 /* PlayerServiceApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B18627023EED59100ACB082 /* PlayerServiceApi.swift */; };
 		5B811E8A23E31CEF00B756A2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B811E8923E31CEF00B756A2 /* GoogleService-Info.plist */; };
 		5BA7BDA423E4334D00A1F507 /* LeaguesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA7BDA223E4334D00A1F507 /* LeaguesViewController.swift */; };
 		5BA7BDA523E4334D00A1F507 /* LeaguesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BA7BDA323E4334D00A1F507 /* LeaguesViewController.xib */; };
@@ -112,6 +113,7 @@
 		44200C978C44601AC2B8AEF4 /* Pods_BeFoot_BeFootUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeFoot_BeFootUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CE1E42D7B95053E077655EE /* Pods_BeFoot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeFoot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B18626C23ECBFE500ACB082 /* LeagueServiceApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueServiceApi.swift; sourceTree = "<group>"; };
+		5B18627023EED59100ACB082 /* PlayerServiceApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerServiceApi.swift; sourceTree = "<group>"; };
 		5B811E8923E31CEF00B756A2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5BA7BDA223E4334D00A1F507 /* LeaguesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesViewController.swift; sourceTree = "<group>"; };
 		5BA7BDA323E4334D00A1F507 /* LeaguesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeaguesViewController.xib; sourceTree = "<group>"; };
@@ -275,6 +277,7 @@
 			isa = PBXGroup;
 			children = (
 				5B18626C23ECBFE500ACB082 /* LeagueServiceApi.swift */,
+				5B18627023EED59100ACB082 /* PlayerServiceApi.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -347,7 +350,6 @@
 				2FDC28FC23AA97DB00367401 /* Sources */,
 				2FDC28FD23AA97DB00367401 /* Frameworks */,
 				2FDC28FE23AA97DB00367401 /* Resources */,
-				8D9D34343D53F8E9035AA76E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -385,7 +387,6 @@
 				2FDC291D23AA97DF00367401 /* Sources */,
 				2FDC291E23AA97DF00367401 /* Frameworks */,
 				2FDC291F23AA97DF00367401 /* Resources */,
-				2B9D8046FD013B260E532025 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -500,23 +501,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2B9D8046FD013B260E532025 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BeFoot-BeFootUITests/Pods-BeFoot-BeFootUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BeFoot-BeFootUITests/Pods-BeFoot-BeFootUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BeFoot-BeFootUITests/Pods-BeFoot-BeFootUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		4D43CDFEB9A93E83FD67E5E0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -537,23 +521,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8D9D34343D53F8E9035AA76E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BeFoot/Pods-BeFoot-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BeFoot/Pods-BeFoot-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BeFoot/Pods-BeFoot-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		92957A705D9717120ED723AF /* [CP] Check Pods Manifest.lock */ = {
@@ -596,6 +563,7 @@
 				2F3C8BF423DB638400B0CF35 /* MatchService.swift in Sources */,
 				2F4602FF23E8CDCB00FDAA29 /* PlayerMockService.swift in Sources */,
 				2F4602F723E8CD1D00FDAA29 /* TeamService.swift in Sources */,
+				5B18627123EED59100ACB082 /* PlayerServiceApi.swift in Sources */,
 				2F4602EC23E8CB0600FDAA29 /* ScorerTableViewController.swift in Sources */,
 				5B18626D23ECBFE500ACB082 /* LeagueServiceApi.swift in Sources */,
 				2F46030223E8D87100FDAA29 /* ScorerTableViewCell.swift in Sources */,

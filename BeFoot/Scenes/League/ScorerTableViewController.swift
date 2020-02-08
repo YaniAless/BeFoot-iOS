@@ -13,15 +13,28 @@ class ScorerTableViewController: UIViewController {
     @IBOutlet var scorerTableView: UITableView!
     public static let scorerTableViewCellId = "stvc"
     
-    var league: String = ""
+    var leagueId: Int = 0
+ 
+    var scorerList: [Player] = []
     
-    var scorerList: [Player] = [] {
-        didSet {
-            self.scorerTableView.reloadData()
-        }
-    }
+    /*
     var playerService: PlayerService {
         return PlayerMockService()
+    } */
+    
+    var playerServiceAPI: PlayerService {
+        return PlayerServiceApi()
+    }
+    
+    init(leagueId: Int) {
+        self.leagueId = leagueId
+        //self.scorerList.teams = self.league.teams.sorted(by: { $0.teamPoints > $1.teamPoints })
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     override func viewDidLoad() {
@@ -33,25 +46,23 @@ class ScorerTableViewController: UIViewController {
         self.scorerTableView.delegate = self
         self.scorerTableView.register(UINib(nibName: "ScorerTableViewCell", bundle: nil), forCellReuseIdentifier: ScorerTableViewController.scorerTableViewCellId)
         
-        
+        self.playerServiceAPI.getBestScorersByLeagueId(leagueId: self.leagueId) { scorers in
+            
+            self.scorerList = scorers.players
+            
+            DispatchQueue.main.async {
+                self.scorerTableView.reloadData()
+            }
+            
+        }
+                
     }
-    
+    /*
     override func viewDidAppear(_ animated: Bool) {
         self.playerService.getAll { (scorerList) in
             self.scorerList = scorerList
         }
-    }
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    }*/
     
 }
 
@@ -64,7 +75,8 @@ extension ScorerTableViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: ScorerTableViewController.scorerTableViewCellId, for: indexPath) as! ScorerTableViewCell
         let player = self.scorerList[indexPath.row]
         cell.playerName.text = player.playerName
-        cell.playerScore.text = String(player.goalNumber)
+        cell.playerScore.text = String(player.goals)
+        cell.playerRank.text = String(indexPath.row + 1)
         return cell
     }
 }

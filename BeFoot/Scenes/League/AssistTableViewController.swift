@@ -63,7 +63,12 @@ extension AssistTableViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: AssistTableViewController.assistTableViewCellId, for: indexPath) as! AssistTableViewCell
         let player = self.assistList[indexPath.row]
         cell.playerName.text = player.playerName
-        cell.playerAssist.text = String(player.assistNumber)
+        
+        if let assists = player.assists {
+            cell.playerAssist.text = String(assists)
+        } else {
+            cell.playerAssist.text = String(0)
+        }
         return cell
     }
 }

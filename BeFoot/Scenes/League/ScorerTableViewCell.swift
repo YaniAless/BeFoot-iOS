@@ -13,6 +13,7 @@ class ScorerTableViewCell: UITableViewCell {
     
     @IBOutlet var playerName: UILabel!
     @IBOutlet var playerScore: UILabel!
+    @IBOutlet var playerRank: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

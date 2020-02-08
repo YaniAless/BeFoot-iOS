@@ -23,7 +23,6 @@ class TeamTableViewController: UIViewController {
         
     init(league: League) {
         self.league = league
-        print("TEAM TABLE CONTROLLER -> \(self.league)")
         self.league.teams = self.league.teams.sorted(by: { $0.teamPoints > $1.teamPoints })
         
         super.init(nibName: nil, bundle: nil)
@@ -50,16 +49,6 @@ class TeamTableViewController: UIViewController {
             }
         }        
     }
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
 }
 
