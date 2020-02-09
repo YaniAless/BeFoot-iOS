@@ -34,7 +34,7 @@ class MatchServiceApi: MatchService {
     }
     
     func getMatchOdds(fixtureId: Int, completion: @escaping (Odds) -> Void) {
-        let jsonUrlString = "\(REMOTE_HOST)predictions/\(fixtureId)"
+        let jsonUrlString = "\(REMOTE_HOST)odds/\(fixtureId)"
         
         guard let url = URL(string: jsonUrlString) else { return }
         
@@ -51,7 +51,7 @@ class MatchServiceApi: MatchService {
     }
     
     func getMatchPrediction(fixtureId: Int, completion: @escaping (Predictions) -> Void) {
-        let jsonUrlString = "\(REMOTE_HOST)odds/\(fixtureId)/"
+        let jsonUrlString = "\(REMOTE_HOST)predictions/\(fixtureId)/"
         
         guard let url = URL(string: jsonUrlString) else { return }
         

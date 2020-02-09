@@ -109,7 +109,9 @@ extension HomeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath)
-        let matchDetailsView = MatchDetailsViewController()
+        
+        let cell = tableView.cellForRow(at: indexPath) as! MatchTableViewCell
+        let matchDetailsView = MatchDetailsViewController(matchId: cell.matchId)
         self.present(matchDetailsView, animated: true)
     }
     
