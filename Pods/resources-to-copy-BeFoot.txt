@@ -1,0 +1,7 @@
+/Users/lexinor/Library/Developer/Xcode/DerivedData/BeFoot-fprvbzqxesqlqjavtfopjxfocfnm/Build/Products/Debug-iphonesimulator/FirebaseUI/FirebaseAnonymousAuthUI.bundle
+/Users/lexinor/Library/Developer/Xcode/DerivedData/BeFoot-fprvbzqxesqlqjavtfopjxfocfnm/Build/Products/Debug-iphonesimulator/FirebaseUI/FirebaseAuthUI.bundle
+/Users/lexinor/Library/Developer/Xcode/DerivedData/BeFoot-fprvbzqxesqlqjavtfopjxfocfnm/Build/Products/Debug-iphonesimulator/FirebaseUI/FirebaseEmailAuthUI.bundle
+/Users/lexinor/Library/Developer/Xcode/DerivedData/BeFoot-fprvbzqxesqlqjavtfopjxfocfnm/Build/Products/Debug-iphonesimulator/FirebaseUI/FirebaseFacebookAuthUI.bundle
+/Users/lexinor/Library/Developer/Xcode/DerivedData/BeFoot-fprvbzqxesqlqjavtfopjxfocfnm/Build/Products/Debug-iphonesimulator/FirebaseUI/FirebaseGoogleAuthUI.bundle
+/Users/lexinor/Library/Developer/Xcode/DerivedData/BeFoot-fprvbzqxesqlqjavtfopjxfocfnm/Build/Products/Debug-iphonesimulator/FirebaseUI/FirebaseOAuthUI.bundle
+/Users/lexinor/Library/Developer/Xcode/DerivedData/BeFoot-fprvbzqxesqlqjavtfopjxfocfnm/Build/Products/Debug-iphonesimulator/FirebaseUI/FirebasePhoneAuthUI.bundle

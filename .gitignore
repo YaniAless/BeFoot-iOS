@@ -94,3 +94,7 @@ iOSInjectionProject/
 Gemfile.lock
 
 .DS_Store
+
+Podfile.lock
+
+contents.xcworkspacedata
