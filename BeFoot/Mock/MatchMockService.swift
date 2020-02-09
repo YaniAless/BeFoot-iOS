@@ -10,6 +10,14 @@ import Foundation
 import CoreLocation
 
 class MatchMockService: MatchService {
+    func getMatchOdds(fixtureId: Int, completion: @escaping (Odds) -> Void) {
+        completion(Odds(odd: [Odd(homeOdd: "", drawOdd: "", awayOdd: "")]))
+    }
+    
+    func getMatchPrediction(fixtureId: Int, completion: @escaping (Predictions) -> Void) {
+        completion(Predictions(prediction: [Prediction(homeForme: "", awayForme: "")]))
+    }
+    
     
     func getByDate(date: String, leagueId: Int, completion: @escaping (Matches) -> Void) {
         self.matchList[0]

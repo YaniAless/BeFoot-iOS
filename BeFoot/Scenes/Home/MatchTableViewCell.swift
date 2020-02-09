@@ -19,6 +19,8 @@ class MatchTableViewCell: UITableViewCell {
     @IBOutlet var homeTeamScore: UILabel!
     @IBOutlet var homeTeamName: UILabel!
     
+    var matchId: Int = 0
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

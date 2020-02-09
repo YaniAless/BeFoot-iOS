@@ -34,25 +34,14 @@ class HomeViewController: UIViewController, UITableViewDelegate, UIPickerViewDel
         
         self.matchTableView.dataSource = self
         self.matchTableView.delegate = self
+        self.matchTableView.rowHeight = 100
         self.matchTableView.register(UINib(nibName: "MatchTableViewCell", bundle: nil), forCellReuseIdentifier: HomeViewController.MatchTableViewCellId)
+        
         getMatches(league: leagues[0])
         
         self.leaguePicker.delegate = self
         self.leaguePicker.dataSource = self
         
-        
-    }
-    
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return leagues[row]
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return leagueList.count
     }
     
     func getDate(date: Date) -> String{
@@ -77,9 +66,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UIPickerViewDel
         getMatches(league: leagues[leaguePicker.selectedRow(inComponent: 0)])
     }
     
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        getMatches(league: leagues[row])
-    }
+    
 }
 
 extension HomeViewController: UITableViewDataSource {
@@ -87,11 +74,14 @@ extension HomeViewController: UITableViewDataSource {
         return self.matchList.count
     }
     
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: HomeViewController.MatchTableViewCellId, for: indexPath) as! MatchTableViewCell
         
         if matchList.count > 0 {
             let match = self.matchList[indexPath.row]
+            print(match.fixtureId)
+            cell.matchId = match.fixtureId
             cell.homeTeamName.text = match.homeTeamName
             //cell.homeTeamLogo.image = UIImage(
             cell.awayTeamName.text = match.awayTeamName
@@ -113,7 +103,23 @@ extension HomeViewController: UITableViewDataSource {
         return cell
     }
     
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        getMatches(league: leagues[row])
+    }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath)
+    }
     
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
     
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return leagues[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return leagueList.count
+    }   
 }

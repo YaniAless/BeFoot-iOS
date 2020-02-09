@@ -11,4 +11,7 @@ protocol MatchService {
     
     func getAll(completion: @escaping ([Match]) -> Void)
     func getByDate(date: String, leagueId: Int, completion: @escaping (Matches) -> Void)
+    func getMatchOdds(fixtureId: Int, completion: @escaping (Odds) -> Void)
+    func getMatchPrediction(fixtureId: Int, completion: @escaping (Predictions) -> Void)
+
 }
