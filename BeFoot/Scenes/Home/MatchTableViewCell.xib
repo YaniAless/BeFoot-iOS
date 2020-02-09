@@ -16,83 +16,54 @@
                 <rect key="frame" x="0.0" y="0.0" width="972" height="206"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-<<<<<<< HEAD
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="FirstTeam" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IvZ-GL-lYC">
-                        <rect key="frame" x="69" y="44" width="75" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-=======
->>>>>>> feature_API
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ScoreFirst" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lOv-SK-0ag">
-                        <rect key="frame" x="387.5" y="92.5" width="78" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDr-kQ-mwy">
                         <rect key="frame" x="475.5" y="92.5" width="21.5" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ScoreSecond" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhY-ae-Lty">
-                        <rect key="frame" x="507" y="92.5" width="103" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="awayTeamScore" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhY-ae-Lty">
+                        <rect key="frame" x="505" y="92.5" width="123.5" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SecondTeam" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVi-d1-Ku0">
-                        <rect key="frame" x="640" y="93" width="100" height="20.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SecondTeam" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVi-d1-Ku0">
+                        <rect key="frame" x="862" y="93" width="100" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lub-HQ-Yhq">
-                        <rect key="frame" x="20" y="78" width="248" height="50"/>
-                    </imageView>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qpu-qc-6Dl">
-                        <rect key="frame" x="755" y="78" width="197" height="50"/>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FirstTeam" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IvZ-GL-lYC">
-                        <rect key="frame" x="283" y="93" width="74.5" height="20.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="homeTeamName" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IvZ-GL-lYC">
+                        <rect key="frame" x="30" y="93" width="128" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="homeTeamScore" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lOv-SK-0ag">
+                        <rect key="frame" x="339" y="92" width="128" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="qpu-qc-6Dl" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="3Xh-oI-lMd"/>
-                    <constraint firstItem="XDr-kQ-mwy" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="4Ie-vo-3Vf"/>
-                    <constraint firstItem="lOv-SK-0ag" firstAttribute="leading" secondItem="IvZ-GL-lYC" secondAttribute="trailing" constant="30" id="D6S-GN-9ND"/>
-                    <constraint firstItem="lub-HQ-Yhq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Gbz-vh-Mbv"/>
-                    <constraint firstItem="HVi-d1-Ku0" firstAttribute="leading" secondItem="jhY-ae-Lty" secondAttribute="trailing" constant="30" id="Kae-1T-Wxb"/>
-                    <constraint firstItem="qpu-qc-6Dl" firstAttribute="leading" secondItem="HVi-d1-Ku0" secondAttribute="trailing" priority="750" constant="15" id="MOb-Fd-OZ5"/>
-                    <constraint firstItem="lub-HQ-Yhq" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="NNc-OD-oBo"/>
-                    <constraint firstItem="HVi-d1-Ku0" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="NRI-0x-9gq"/>
-                    <constraint firstItem="XDr-kQ-mwy" firstAttribute="leading" secondItem="lOv-SK-0ag" secondAttribute="trailing" constant="10" id="PIW-Ik-tx8"/>
-                    <constraint firstItem="jhY-ae-Lty" firstAttribute="leading" secondItem="XDr-kQ-mwy" secondAttribute="trailing" constant="10" id="QZW-1R-K98"/>
-                    <constraint firstItem="qpu-qc-6Dl" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Qi5-GF-M8T"/>
-                    <constraint firstItem="qpu-qc-6Dl" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="Uzu-Oe-DIA"/>
-                    <constraint firstItem="lOv-SK-0ag" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="YI1-J6-vuo"/>
-                    <constraint firstItem="IvZ-GL-lYC" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Zd1-IP-Nwo"/>
-                    <constraint firstItem="qpu-qc-6Dl" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Zsm-7o-IOU"/>
-                    <constraint firstItem="IvZ-GL-lYC" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="em2-iQ-k9X"/>
-                    <constraint firstItem="qpu-qc-6Dl" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="fbT-hW-oQe"/>
-                    <constraint firstItem="jhY-ae-Lty" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="gYa-1g-bFD"/>
-                    <constraint firstItem="lub-HQ-Yhq" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="iPL-oS-w75"/>
-                    <constraint firstItem="XDr-kQ-mwy" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="jih-m7-USE"/>
-                    <constraint firstItem="IvZ-GL-lYC" firstAttribute="leading" secondItem="lub-HQ-Yhq" secondAttribute="trailing" priority="750" constant="15" id="n4i-dU-QOq"/>
-                    <constraint firstItem="lub-HQ-Yhq" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="pes-3g-yj5"/>
+                    <constraint firstItem="XDr-kQ-mwy" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="1M7-fl-H6C"/>
+                    <constraint firstItem="HVi-d1-Ku0" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="10" id="D36-md-HPh"/>
+                    <constraint firstItem="HVi-d1-Ku0" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="HxT-yj-Z2d"/>
+                    <constraint firstItem="XDr-kQ-mwy" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="LuT-uA-nPe"/>
+                    <constraint firstItem="jhY-ae-Lty" firstAttribute="leading" secondItem="XDr-kQ-mwy" secondAttribute="trailing" constant="8" id="P3S-qh-1BN"/>
+                    <constraint firstItem="IvZ-GL-lYC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="afI-Yk-Por"/>
+                    <constraint firstItem="jhY-ae-Lty" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="jKg-MB-wMA"/>
+                    <constraint firstItem="IvZ-GL-lYC" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="kfV-gH-V9D"/>
+                    <constraint firstItem="XDr-kQ-mwy" firstAttribute="leading" secondItem="lOv-SK-0ag" secondAttribute="trailing" constant="8.5" id="lIX-l3-NQM"/>
+                    <constraint firstItem="lOv-SK-0ag" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="yeB-3X-LFG"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="awayTeamLogo" destination="qpu-qc-6Dl" id="fxW-Lm-Xg4"/>
                 <outlet property="awayTeamName" destination="HVi-d1-Ku0" id="Qfo-Gm-04O"/>
                 <outlet property="awayTeamScore" destination="jhY-ae-Lty" id="pfe-Xr-xtH"/>
-                <outlet property="homeTeamLogo" destination="lub-HQ-Yhq" id="H0X-wU-bFA"/>
                 <outlet property="homeTeamName" destination="IvZ-GL-lYC" id="9dA-wp-fkd"/>
                 <outlet property="homeTeamScore" destination="lOv-SK-0ag" id="jfa-8w-kJY"/>
             </connections>
