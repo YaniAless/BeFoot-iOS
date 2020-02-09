@@ -19,8 +19,18 @@ class MatchDetailsViewController: UIViewController {
     @IBOutlet var energy1: UILabel!
     @IBOutlet var energy2: UILabel!
     @IBOutlet var coteList: UITableView!
+    @IBOutlet var homeOdd: UILabel!
+    @IBOutlet var drawOdd: UILabel!
+    @IBOutlet var awayOdd: UILabel!
     
     var matchId = 0
+    let teamName1Text: String
+    let teamName2Text: String
+    let teamScore1Text: String
+    let teamScore2Text: String
+    
+    var prediction: [Prediction] = []
+    var odds: [Odd] = []
     
     var match: Match?
     
@@ -28,8 +38,12 @@ class MatchDetailsViewController: UIViewController {
         return MatchServiceApi()
     }
     
-    init(matchId: Int) {
+    init(matchId: Int, teamName1: String, teamName2: String, teamScore1: String, teamScore2: String) {
         self.matchId = matchId
+        self.teamName1Text = teamName1
+        self.teamName2Text = teamName2
+        self.teamScore1Text = teamScore1
+        self.teamScore2Text = teamScore2
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -40,6 +54,10 @@ class MatchDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.teamName1.text = self.teamName1Text
+        self.teamName2.text = self.teamName2Text
+        self.teamScore1.text = self.teamScore1Text
+        self.teamScore2.text = self.teamScore2Text
         print(getMatch(matchId: self.matchId))
         
         // Do any additional setup after loading the view.
@@ -47,17 +65,22 @@ class MatchDetailsViewController: UIViewController {
     
     func getMatch(matchId: Int){
         self.matchService.getMatchOdds(fixtureId: matchId){ odds in
-            print(odds)
-//            DispatchQueue.main.async {
-//                self.matchTableView.reloadData()
-//            }
+            self.odds = odds.odd
+            
+            DispatchQueue.main.async {
+                self.homeOdd.text = self.odds[0].homeOdd
+                self.drawOdd.text = self.odds[0].drawOdd
+                self.awayOdd.text = self.odds[0].awayOdd
+            }
         }
         
         self.matchService.getMatchPrediction(fixtureId: matchId){ predictions in
-            print(predictions)
-//            DispatchQueue.main.async {
-//                self.matchTableView.reloadData()
-//            }
+            self.prediction = predictions.prediction
+            
+            DispatchQueue.main.async {
+                self.energy1.text = self.prediction[0].homeForme
+                self.energy2.text = self.prediction[0].awayForme
+            }
         }
     }
 

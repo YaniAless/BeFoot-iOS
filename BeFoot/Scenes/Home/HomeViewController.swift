@@ -111,7 +111,7 @@ extension HomeViewController: UITableViewDataSource {
         print(indexPath)
         
         let cell = tableView.cellForRow(at: indexPath) as! MatchTableViewCell
-        let matchDetailsView = MatchDetailsViewController(matchId: cell.matchId)
+        let matchDetailsView = MatchDetailsViewController(matchId: cell.matchId, teamName1 : cell.homeTeamName.text!, teamName2: cell.awayTeamName.text!, teamScore1: cell.homeTeamScore.text!, teamScore2: cell.awayTeamScore.text!)
         self.present(matchDetailsView, animated: true)
     }
     

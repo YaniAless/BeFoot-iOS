@@ -43,7 +43,7 @@ class MatchServiceApi: MatchService {
             do {
                 let odds = try JSONDecoder().decode(Odds.self, from: data)
                 print(odds)
-                //completion(odds)
+                completion(odds)
             } catch let jsonErr {
                 debugPrint("Error gettings match odds ! \(jsonErr)")
             }
@@ -60,7 +60,7 @@ class MatchServiceApi: MatchService {
             do {
                 let predictions = try JSONDecoder().decode(Predictions.self, from: data)
                 print(predictions)
-                //completion(predictions)
+                completion(predictions)
             } catch let jsonErr {
                 debugPrint("Error gettings match predictions ! \(jsonErr)")
             }
