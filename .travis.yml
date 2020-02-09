@@ -15,4 +15,5 @@ notifications:
 install:
   - gem install bundler
   - bundle install
+  - xcode-select --install
 script: bundle exec fastlane dev_lane
