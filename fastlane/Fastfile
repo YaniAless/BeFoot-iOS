@@ -15,11 +15,11 @@
 
 default_platform(:ios)
 
+default_platform(:ios)
+
 platform :ios do
-  desc "Description of what the lane does"
+  desc "This lane will start tests and generate a report with xcov"
   lane :dev_lane do
-    # add actions here: https://docs.fastlane.tools/actions
-    say("Lane started...")
-    say("Lane ended...")
+    scan(code_coverage: true)
   end
 end
