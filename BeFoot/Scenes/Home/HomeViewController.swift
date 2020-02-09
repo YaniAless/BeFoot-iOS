@@ -11,33 +11,26 @@ import UIKit
 class HomeViewController: UIViewController {
     
     
-    @IBOutlet var matchTableView: UITableView!
-    public static let MatchTableViewCellId = "mtvc"
-    
-    var matchList: [Match] = [] {
-        didSet {
-            self.matchTableView.reloadData()
-        }
-    }
-    var matchService: MatchService {
-        return MatchMockService()
-    }
+    @IBOutlet var dayMatch: UIButton!
+    @IBOutlet var pronostics: UIButton!
+    @IBOutlet var history: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Home"
-        
-        // self.matchTableView.rowHeight = 50
-        self.matchTableView.dataSource = self
-        self.matchTableView.delegate = self
-        self.matchTableView.register(UINib(nibName: "MatchTableViewCell", bundle: nil), forCellReuseIdentifier: HomeViewController.MatchTableViewCellId)
-        
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        self.matchService.getAll { (matchList) in
-            self.matchList = matchList
-        }
+    
+    @IBAction func touchDayMatch(_ sender: Any) {
+        self.navigationController?.pushViewController(DayMatchViewController(), animated: true)
+    }
+    
+    @IBAction func touchPronsotics(_ sender: Any) {
+        self.navigationController?.pushViewController(PronosticsViewController(), animated: true)
+    }
+    
+    @IBAction func touchHistory(_ sender: Any) {
+        self.navigationController?.pushViewController(HistoryViewController(), animated: true)
     }
     
 
@@ -51,24 +44,4 @@ class HomeViewController: UIViewController {
     }
     */
 
-}
-
-extension HomeViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.matchList.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: HomeViewController.MatchTableViewCellId, for: indexPath) as! MatchTableViewCell
-        let match = self.matchList[indexPath.row]
-        cell.nameFirst.text = match.nameFirst
-        cell.nameSecond.text = match.nameSecond
-        cell.scoreFirst.text = String(match.scoreFirst)
-        cell.scoreSecond.text = String(match.scoreSecond)
-        return cell
-    }
-}
-
-extension HomeViewController: UITableViewDelegate {
-    
 }

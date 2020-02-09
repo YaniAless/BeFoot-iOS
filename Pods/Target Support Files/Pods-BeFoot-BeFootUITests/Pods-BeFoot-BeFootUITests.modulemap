@@ -1,0 +1,6 @@
+framework module Pods_BeFoot_BeFootUITests {
+  umbrella header "Pods-BeFoot-BeFootUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
