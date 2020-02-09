@@ -16,32 +16,32 @@
                 <rect key="frame" x="0.0" y="0.0" width="972" height="206"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDr-kQ-mwy">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="VS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDr-kQ-mwy">
                         <rect key="frame" x="475.5" y="92.5" width="21.5" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="awayTeamScore" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhY-ae-Lty">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="awayTeamScore" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhY-ae-Lty">
                         <rect key="frame" x="505" y="92.5" width="123.5" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SecondTeam" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVi-d1-Ku0">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="SecondTeam" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVi-d1-Ku0">
                         <rect key="frame" x="862" y="93" width="100" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="homeTeamName" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IvZ-GL-lYC">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="homeTeamName" lineBreakMode="headTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IvZ-GL-lYC">
                         <rect key="frame" x="30" y="93" width="128" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="homeTeamScore" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lOv-SK-0ag">
-                        <rect key="frame" x="339" y="92" width="128" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="homeTeamScore" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lOv-SK-0ag">
+                        <rect key="frame" x="339" y="92.5" width="128" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -53,10 +53,12 @@
                     <constraint firstItem="HVi-d1-Ku0" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="HxT-yj-Z2d"/>
                     <constraint firstItem="XDr-kQ-mwy" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="LuT-uA-nPe"/>
                     <constraint firstItem="jhY-ae-Lty" firstAttribute="leading" secondItem="XDr-kQ-mwy" secondAttribute="trailing" constant="8" id="P3S-qh-1BN"/>
+                    <constraint firstItem="lOv-SK-0ag" firstAttribute="leading" secondItem="IvZ-GL-lYC" secondAttribute="trailing" constant="30" id="U9j-b5-W5a"/>
                     <constraint firstItem="IvZ-GL-lYC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="afI-Yk-Por"/>
                     <constraint firstItem="jhY-ae-Lty" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="jKg-MB-wMA"/>
                     <constraint firstItem="IvZ-GL-lYC" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="kfV-gH-V9D"/>
                     <constraint firstItem="XDr-kQ-mwy" firstAttribute="leading" secondItem="lOv-SK-0ag" secondAttribute="trailing" constant="8.5" id="lIX-l3-NQM"/>
+                    <constraint firstItem="HVi-d1-Ku0" firstAttribute="leading" secondItem="jhY-ae-Lty" secondAttribute="trailing" constant="30" id="lu5-5R-OXc"/>
                     <constraint firstItem="lOv-SK-0ag" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="yeB-3X-LFG"/>
                 </constraints>
             </tableViewCellContentView>

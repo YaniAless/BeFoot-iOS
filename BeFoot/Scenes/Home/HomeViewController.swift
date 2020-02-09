@@ -109,6 +109,8 @@ extension HomeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath)
+        let matchDetailsView = MatchDetailsViewController()
+        self.present(matchDetailsView, animated: true)
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
