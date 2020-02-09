@@ -1,5 +1,5 @@
 //
-//  PlayerServiceApi.swift
+//  MatchServiceApi.swift
 //  BeFoot
 //
 //  Created by lexinor on 08/02/2020.
@@ -8,32 +8,32 @@
 
 import Foundation
 
-class PlayerServiceApi: PlayerService {
+class MatchServiceApi: MatchService {
     
     private let LOCAL_HOST: String = "http://localhost:3000/"
     private let REMOTE_HOST: String = "https://befoot.herokuapp.com/"
     
-    func getAll(completion: @escaping ([Player]) -> Void) {
-        completion([])
+    func getAll(completion: @escaping ([Match]) -> Void) {
+        
     }
     
-    func getBestScorersByLeagueId(leagueId: Int, completion: @escaping (Players) -> Void) {
-        let jsonUrlString = "\(REMOTE_HOST)topscorers/\(leagueId)"
+    func getByDate(date: String, leagueId: Int,completion: @escaping (Matches) -> Void) {
+        let jsonUrlString = "\(REMOTE_HOST)match/\(leagueId)/\(date)"
         
         guard let url = URL(string: jsonUrlString) else { return }
         
         URLSession.shared.dataTask(with: url) { (data, res, err) in
             guard let data = data else { return }
             do {
-                let scorers = try JSONDecoder().decode(Players.self, from: data)
-                completion(scorers)
+                let matches = try JSONDecoder().decode(Matches.self, from: data)
+                completion(matches)
             } catch let jsonErr {
-                debugPrint("Error gettings scorers ! \(jsonErr)")
+                debugPrint("Error gettings Matches ! \(jsonErr)")
             }
         }.resume()
     }
 }
 
-struct Players: Decodable {
-    let players: [Player]
+struct Matches: Decodable {
+    let fixtures: [Match]
 }

@@ -11,8 +11,6 @@ import UIKit
 class LeaguesViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
     @IBOutlet var leaguesPicker: UIPickerView!
-    
-    @IBOutlet var assistsButton: UIButton!
     @IBOutlet var scorersButton: UIButton!
     @IBOutlet var rankButton: UIButton!
     
@@ -70,13 +68,6 @@ class LeaguesViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         let leagueIndex = leaguesPicker.selectedRow(inComponent: 0)
         let scorerTableViewController = ScorerTableViewController(leagueId: self.leagueList[leagueIndex].leagueId)
             self.present(scorerTableViewController, animated: true)
-    }
-    
-    
-    @IBAction func assistTouchAction(_ sender: UIButton) {
-        let leagueIndex = leaguesPicker.selectedRow(inComponent: 0)
-        let assistTableViewController = TeamTableViewController(league: leagueList[leagueIndex])
-        self.present(assistTableViewController, animated: true)
     }
     
 

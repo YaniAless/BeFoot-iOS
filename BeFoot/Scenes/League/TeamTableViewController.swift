@@ -15,8 +15,6 @@ class TeamTableViewController: UIViewController {
     
     var league: League
     
-    var rankCounter: Int = 1
-    
     var leagueService: LeagueService {
         return LeagueServiceApi()
     }
@@ -35,9 +33,7 @@ class TeamTableViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "List"
-        
-        // self.matchTableView.rowHeight = 50
+
         self.teamTableView.dataSource = self
         self.teamTableView.delegate = self
         self.teamTableView.register(UINib(nibName: "TeamTableViewCell", bundle: nil), forCellReuseIdentifier: TeamTableViewController.teamTableViewCellId)
@@ -64,8 +60,7 @@ extension TeamTableViewController: UITableViewDataSource {
         
         cell.teamPointsLabel.text = String(team.teamPoints)
         cell.teamNameLabel.text = team.teamName
-        cell.teamRankLabel.text = String(self.rankCounter)
-        self.rankCounter += 1
+        cell.teamRankLabel.text = String(team.teamRank)
         return cell
     }
 }

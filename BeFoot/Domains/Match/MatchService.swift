@@ -10,5 +10,5 @@ import Foundation
 protocol MatchService {
     
     func getAll(completion: @escaping ([Match]) -> Void)
-    func getByDate(_ date: Date, completion: @escaping (Match?) -> Void)
+    func getByDate(date: String, leagueId: Int, completion: @escaping (Matches) -> Void)
 }
