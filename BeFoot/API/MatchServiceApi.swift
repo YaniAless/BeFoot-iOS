@@ -18,7 +18,7 @@ class MatchServiceApi: MatchService {
     }
     
     func getByDate(date: String, leagueId: Int,completion: @escaping (Matches) -> Void) {
-        let jsonUrlString = "\(LOCAL_HOST)match/\(leagueId)/\(date)"
+        let jsonUrlString = "\(REMOTE_HOST)match/\(leagueId)/\(date)"
         
         guard let url = URL(string: jsonUrlString) else { return }
         

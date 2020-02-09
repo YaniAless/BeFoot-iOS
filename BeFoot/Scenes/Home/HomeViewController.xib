@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="BeFoot" customModuleProvider="target">
             <connections>
                 <outlet property="datePicker" destination="1X9-Zj-sJO" id="Mgt-vk-Ung"/>
+                <outlet property="leaguePicker" destination="LUV-pS-Kx6" id="B53-TE-Md0"/>
                 <outlet property="matchTableView" destination="xPT-Wf-CUQ" id="6nB-Je-cyL"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -26,31 +27,46 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" indicatorStyle="black" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xPT-Wf-CUQ">
-                    <rect key="frame" x="0.0" y="233" width="414" height="630"/>
+                    <rect key="frame" x="0.0" y="315" width="414" height="581"/>
                 </tableView>
                 <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="1X9-Zj-sJO">
-                    <rect key="frame" x="0.0" y="131" width="414" height="94"/>
+                    <rect key="frame" x="0.0" y="231" width="414" height="76"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="94" id="miH-Ti-1zg"/>
+                        <constraint firstAttribute="height" constant="76" id="V4T-eD-jgc"/>
                     </constraints>
                     <connections>
                         <action selector="datePickerChanged:" destination="-1" eventType="valueChanged" id="XJp-xh-ar4"/>
                     </connections>
                 </datePicker>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LUV-pS-Kx6">
+                    <rect key="frame" x="0.0" y="155" width="414" height="68"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="68" id="sGW-1M-civ"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="1gt-ZH-pcD"/>
+                        <outlet property="delegate" destination="-1" id="TGO-GE-kr6"/>
+                    </connections>
+                </pickerView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="1X9-Zj-sJO" firstAttribute="leading" secondItem="xPT-Wf-CUQ" secondAttribute="leading" id="28o-fa-pAi"/>
+                <constraint firstItem="LUV-pS-Kx6" firstAttribute="trailing" secondItem="1X9-Zj-sJO" secondAttribute="trailing" id="3Tf-HD-72x"/>
+                <constraint firstAttribute="bottom" secondItem="xPT-Wf-CUQ" secondAttribute="bottom" id="61P-MJ-QEc"/>
+                <constraint firstItem="LUV-pS-Kx6" firstAttribute="leading" secondItem="wSv-dy-HMw" secondAttribute="leading" id="6f4-6K-tFO"/>
+                <constraint firstItem="LUV-pS-Kx6" firstAttribute="trailing" secondItem="wSv-dy-HMw" secondAttribute="trailing" id="BKU-fR-jhW"/>
+                <constraint firstItem="1X9-Zj-sJO" firstAttribute="leading" secondItem="xPT-Wf-CUQ" secondAttribute="leading" id="FL4-aK-AYO"/>
+                <constraint firstItem="1X9-Zj-sJO" firstAttribute="top" secondItem="LUV-pS-Kx6" secondAttribute="bottom" constant="8" symbolic="YES" id="KFV-z4-Toc"/>
                 <constraint firstItem="wSv-dy-HMw" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="LxF-Op-FEz"/>
-                <constraint firstAttribute="bottom" secondItem="xPT-Wf-CUQ" secondAttribute="bottom" constant="33" id="MBw-rl-8EE"/>
-                <constraint firstItem="xPT-Wf-CUQ" firstAttribute="top" secondItem="1X9-Zj-sJO" secondAttribute="bottom" constant="8" id="TIE-rS-6f3"/>
-                <constraint firstItem="wSv-dy-HMw" firstAttribute="leading" secondItem="1X9-Zj-sJO" secondAttribute="leading" id="dkW-pK-87r"/>
-                <constraint firstItem="1X9-Zj-sJO" firstAttribute="top" secondItem="wSv-dy-HMw" secondAttribute="bottom" constant="23" id="gUu-1q-VMZ"/>
-                <constraint firstItem="wSv-dy-HMw" firstAttribute="trailing" secondItem="1X9-Zj-sJO" secondAttribute="trailing" id="itc-u0-VSP"/>
-                <constraint firstItem="1X9-Zj-sJO" firstAttribute="trailing" secondItem="xPT-Wf-CUQ" secondAttribute="trailing" id="kK5-ec-LSD"/>
+                <constraint firstItem="LUV-pS-Kx6" firstAttribute="top" secondItem="wSv-dy-HMw" secondAttribute="bottom" constant="47" id="TCu-15-iDx"/>
+                <constraint firstItem="LUV-pS-Kx6" firstAttribute="leading" secondItem="1X9-Zj-sJO" secondAttribute="leading" id="k2Y-PF-DHx"/>
+                <constraint firstItem="1X9-Zj-sJO" firstAttribute="trailing" secondItem="xPT-Wf-CUQ" secondAttribute="trailing" id="men-oo-u5R"/>
                 <constraint firstItem="wSv-dy-HMw" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="tcb-nh-uUX"/>
+                <constraint firstItem="xPT-Wf-CUQ" firstAttribute="top" secondItem="1X9-Zj-sJO" secondAttribute="bottom" constant="8" symbolic="YES" id="xBb-Hn-OB1"/>
                 <constraint firstItem="wSv-dy-HMw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="zMV-4P-YGM"/>
             </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="114.50892857142857"/>
         </view>

@@ -8,15 +8,21 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, UITableViewDelegate {
-      
-    
-    
+class HomeViewController: UIViewController, UITableViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
+        
+    @IBOutlet var leaguePicker: UIPickerView!
     @IBOutlet var datePicker: UIDatePicker!
     @IBOutlet var matchTableView: UITableView!
+    
     public static let MatchTableViewCellId = "mtvc"
     
     var matchList: [Match] = []
+    private let leagues: [String] = ["Bundesliga","LIGA","Ligue 1","Premier League","Serie A"]
+    private let leagueList: Dictionary<String, Int> = ["Bundesliga": 754,
+                                                       "LIGA": 775,
+                                                       "Ligue 1": 525,
+                                                       "Premier League": 524,
+                                                       "Serie A": 891]
     
     var matchService: MatchService {
         return MatchServiceApi()
@@ -29,7 +35,24 @@ class HomeViewController: UIViewController, UITableViewDelegate {
         self.matchTableView.dataSource = self
         self.matchTableView.delegate = self
         self.matchTableView.register(UINib(nibName: "MatchTableViewCell", bundle: nil), forCellReuseIdentifier: HomeViewController.MatchTableViewCellId)
-        getMatches()
+        getMatches(league: leagues[0])
+        
+        self.leaguePicker.delegate = self
+        self.leaguePicker.dataSource = self
+        
+        
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return leagues[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return leagueList.count
     }
     
     func getDate(date: Date) -> String{
@@ -40,9 +63,9 @@ class HomeViewController: UIViewController, UITableViewDelegate {
         return date
     }
     
-    func getMatches(){
-        
-        self.matchService.getByDate(date: getDate(date: datePicker.date), leagueId: 525) { matches in
+    func getMatches(league: String){
+        guard let leagueId = leagueList[league] else { return }
+        self.matchService.getByDate(date: getDate(date: datePicker.date), leagueId: leagueId) { matches in
             self.matchList = matches.fixtures
             DispatchQueue.main.async {
                 self.matchTableView.reloadData()
@@ -51,7 +74,11 @@ class HomeViewController: UIViewController, UITableViewDelegate {
     }
     
     @IBAction func datePickerChanged(_ sender: Any) {
-        getMatches()
+        getMatches(league: leagues[leaguePicker.selectedRow(inComponent: 0)])
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        getMatches(league: leagues[row])
     }
 }
 
@@ -77,7 +104,7 @@ extension HomeViewController: UITableViewDataSource {
                 cell.homeTeamScore.text = "-"
             }
             
-            if let awayScore = match.homeTeamScore {
+            if let awayScore = match.awayTeamScore {
                 cell.awayTeamScore.text = String(awayScore)
             } else {
                 cell.awayTeamScore.text = "-"
