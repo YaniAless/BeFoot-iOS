@@ -40,7 +40,7 @@ class BeFootTests: XCTestCase {
             
             expectation.fulfill()
         }
-        waitForExpectations(timeout: 5, handler: nil)
+        waitForExpectations(timeout: 10, handler: nil)
         
     }
     func testMatchService(){
@@ -56,7 +56,7 @@ class BeFootTests: XCTestCase {
             
             expectation.fulfill()
         }
-        waitForExpectations(timeout: 5, handler: nil)
+        waitForExpectations(timeout: 10, handler: nil)
         
     }
 
