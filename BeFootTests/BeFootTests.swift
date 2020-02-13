@@ -36,11 +36,11 @@ class BeFootTests: XCTestCase {
 
             XCTAssertEqual(rankSize, 0)
             rankSize = rank.teams.count
-            XCTAssertEqual(rank.teams.count, 20)
             
             expectation.fulfill()
         }
         waitForExpectations(timeout: 10, handler: nil)
+        XCTAssertEqual(rankSize, 20)
         
     }
     func testMatchService(){
@@ -52,12 +52,11 @@ class BeFootTests: XCTestCase {
 
             XCTAssertEqual(matchCount, 0)
             matchCount = matches.fixtures.count
-            XCTAssertEqual(matches.fixtures.count, 6)
             
             expectation.fulfill()
         }
         waitForExpectations(timeout: 10, handler: nil)
-        
+        XCTAssertEqual(matchCount, 6)
     }
 
     func testPerformanceExample() {
