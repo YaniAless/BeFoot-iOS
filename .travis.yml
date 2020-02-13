@@ -17,4 +17,6 @@ notifications:
 install:
   - gem install bundler
   - bundle install
+  - pod deintegrate
+  - pod install
 script: bundle exec fastlane ios dev_lane
